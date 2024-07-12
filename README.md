@@ -23,10 +23,10 @@ SDAIA | سدايا
 - [IBM AI Engineering Specialization](https://www.coursera.org/account/accomplishments/specialization/YQNQKZESFUN2) - IBM
 - [IBM AI Developer Specialization](https://www.coursera.org/account/accomplishments/specialization/KGKQJMJSJXPX) - IBM
 - [Google Data Analytics Specialization](https://www.credly.com/badges/b2dbd015-695c-4de7-82d6-45acfac1cb0c/linked_in_profile) - Google
-- Red Hat System Administration I (RH124) | 9.0 - Red Hat
 - [Microsoft Azure for Data Engineering](https://www.coursera.org/account/accomplishments/records/9BX9KGE3HLA5) - Microsoft
 - [Introduction to Agile Development and Scrum](https://www.coursera.org/account/accomplishments/records/RNZWGAPQD9J2) - IBM
 - [AI, Business & the Future of Work](https://www.coursera.org/account/accomplishments/records/3SVD6P4DPSSV) - Lund University
+- Red Hat System Administration I (RH124) | 9.0 - Red Hat
 
 ### Projects 
 
