@@ -1,11 +1,4 @@
-# Hi there, I'm Rinad Hassan 👋
-
-![Profile](https://media.licdn.com/dms/image/D4E03AQF0MXbsdLtq1A/profile-displayphoto-shrink_400_400/0/1714148566032?e=1726099200&v=beta&t=jrmly5IVezwjXTZr56nMo2v7R-WOssvbDM-BJBzvDhs)
-
-
-## About Me
-I am a Data Science student at the University of Jeddah, currently focusing on Machine Learning and Data Engineering. I am passionate about FinTech and leveraging data to drive insights and innovation.
-
+# Hi there👋 Welcome to my portfolio 
 
 ## My Skills
 
