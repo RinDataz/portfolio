@@ -1,5 +1,7 @@
 # Hi there👋 Welcome to my portfolio 
 
+## about me
+
 ## My Skills
 
 - **Languages:** Python, JavaScript, HTML, CSS
