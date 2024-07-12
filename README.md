@@ -4,7 +4,7 @@
 
 I am a Data Science student at the University of Jeddah, currently focusing on Machine Learning and Data Engineering. I am passionate about FinTech and leveraging data to drive insights and innovation.
 
-![Profile](https://via.placeholder.com/150)
+![Profile](https://media.licdn.com/dms/image/D4E03AQF0MXbsdLtq1A/profile-displayphoto-shrink_400_400/0/1714148566032?e=1726099200&v=beta&t=jrmly5IVezwjXTZr56nMo2v7R-WOssvbDM-BJBzvDhs)
 
 ## My Skills
 
@@ -75,14 +75,3 @@ I am a Data Science student at the University of Jeddah, currently focusing on M
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/renad-hassan-dataz/)
 [![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://x.com/RinDataz)
-
-## GitHub Stats
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=RinDataz&show_icons=true&theme=tokyonight)
-![GitHub stats](https://github-readme-stats.vercel.app/api?username=RinDataz&show_icons=true&theme=tokyonight)
-
-## GitHub Streak
-[![GitHub Streak](https://streak-stats.demolab.com/?user=RinDataz&theme=tokyonight)](https://git.io/streak-stats)
-
-![Profile](https://via.placeholder.com/150)
-![Skills](https://via.placeholder.com/150)
-![Projects](https://via.placeholder.com/150)
