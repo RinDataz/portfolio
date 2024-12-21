@@ -1,73 +1,231 @@
-# Hi there👋 Welcome to my portfolio 
+# Portfolio Template
 
-## about me
+### A beautiful minimal and accessible portfolio template for Developers ✨.
 
-## My Skills
+To View the live site click [here &rarr;](https://portfolio-template.surge.sh)
 
-- **Languages:** Python, JavaScript, HTML, CSS
-- **Databases:** Oracle, NoSQL
-- **Data Visualization:** Tableau, Power BI
-- **Tools:** Git, VS Code, Jupyter Notebook, BigQuery, SQL
+![Portfolio Gif](/images/portfolio.gif)
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![Tableau](https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white)
-![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
-![NoSQL](https://img.shields.io/badge/NoSQL-4DB33D?style=for-the-badge&logo=mongodb&logoColor=white)
+## Want to learn How to create a template like this ?
 
-## Experience 
+You can watch [this video series](https://www.youtube.com/watch?v=1nchVfpMGSg&list=PLwJBGAxcH7GzdavgKlCACbESzr-40lw3L) on my youtube channel where I re-create this from scratch. 
 
-### Google Student Developers Club  
-**Content Creation Department**
 
-### Wathba - Apprenticeship  
-**Impact Maker Mentee**
 
-### Data Analyst - STC Virtual Work Experience  
-- Conducted comprehensive statistical analysis of datasets to uncover key insights.
-- Developed a predictive model to forecast customer views over the next two months.
-- Created a recommendation model to enhance the viewing experience on stc TV.
-- Utilized data storytelling skills to prepare and deliver presentations showcasing analysis results and insights.
+## Features
 
-### Large Language Models Bootcamp Trainee  
-**SDAIA | سدايا**
+- Clean, Simple and Modern UI Design.
+- Uses No CSS or JavaScript Frameworks or libraries as dependencies.
+- Built with only HTML, CSS and a bit of JavaScript 🔨.
+- Well Organized Documentation.
+- Keyboard support.
+- Fully Responsive.
+- Loads fast ⚡.
 
-## Licenses & Certifications
-- [IBM AI Engineering Specialization](https://www.coursera.org/account/accomplishments/specialization/YQNQKZESFUN2) - IBM
-- [IBM AI Developer Specialization](https://www.coursera.org/account/accomplishments/specialization/KGKQJMJSJXPX) - IBM
-- [Google Data Analytics Specialization](https://www.credly.com/badges/b2dbd015-695c-4de7-82d6-45acfac1cb0c/linked_in_profile) - Google
-- [Microsoft Azure for Data Engineering](https://www.coursera.org/account/accomplishments/records/9BX9KGE3HLA5) - Microsoft
-- [Introduction to Agile Development and Scrum](https://www.coursera.org/account/accomplishments/records/RNZWGAPQD9J2) - IBM
-- [AI, Business & the Future of Work](https://www.coursera.org/account/accomplishments/records/3SVD6P4DPSSV) - Lund University
-- Red Hat System Administration I (RH124) | 9.0 - Red Hat
+## Lighthouse Report
 
-## Projects
+![Lighthouse Report](/images/lighthouse-report.png)
 
-### [Google Data Analytics Capstone - Cyclistic Case Study](https://github.com/RinDataz/Google-Data-Analytics-Capstone-Cyclistic-Case-Study)
-- **Objective**: Analyze user behavior and develop strategies to convert casual riders into annual members.
-- **Data Handling**: Cleaned, organized, and analyzed Cyclistic's historical trip data.
-- **Trend Identification**: Identified trends and patterns in bike usage.
-- **Data Visualization**: Used Tableau to compare behaviors of casual riders and members.
-- **Insights Discovery**: Discovered preferences and usage patterns of different rider types.
-- **Strategy Development**: Proposed targeted marketing strategies:
-  - Seasonal campaigns
-  - Flexible membership options
-  - Ride-time incentives
-- **Impact**: Provided data-driven recommendations to drive growth and enhance Cyclistic's bike-share program.
+### Contributions are warmly welcomed ❤️.
 
-### [STC Virtual Work Experience](https://github.com/RinDataz/STC-Virtual-Work-Experience)
-- **Project Overview**: Statistical analysis, predictive modeling, and recommendation system development.
+## Getting Started 🚀
 
-### [IBM AI Engineer](https://github.com/RinDataz/IBM-AI-Engineer-)
-- This repository showcases my progress and projects throughout the IBM AI Engineer specialization offered on Coursera. It serves as a comprehensive portfolio of my work, encompassing various AI concepts and applications covered in the specialization.
+You'll need [Git](https://git-scm.com) to be installed on your computer. 
+```
+# Clone this repository
+$ git clone https://github.com/nisarhassan12/portfolio-template
+```
 
-### [Safe Health](https://github.com/RinDataz/SafeHealth-app)
-- **Project Overview**: Documentation for my software engineering project.
+If you don't have Git installed or you don't like using the terminal then you can download the [zip](https://github.com/nisarhassan12/portfolio-template/archive/master.zip) and extract that and open the extracted folder in the code editor of your your choice.
 
-## Connect with Me
+## Editing the Template 🔨
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/renad-hassan-dataz/)
-[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://x.com/RinDataz)
+Go to `index.html` and fill your information. 
+
+### Header
+
+In all of the places where you're supposed to fill your information you'll find HTML comments. As shown below just replace what is already in the opening and closing tags below the comment with your information.
+
+```html
+<div class="header__text-box row">
+    <div class="header__text">
+        <h1 class="heading-primary">
+        <!-- Replace the following name with your name -->
+        <span>Syed Ali Hussnain</span>
+        </h1>
+        <!-- Put a small paragraph about yourself -->
+        <p>A Web Developer based in Lahore, Pakistan.</p>
+        <a href="#contact" class="btn btn--pink">Get in touch</a>
+    </div>
+</div>
+```
+
+### Work Section
+
+Each div with class `work__box` represents a project, replace the contents of the all the tags with the information of your projects.
+
+```html
+<div class="work__box">
+    <div class="work__text">
+    <h3>Portfolio Template</h3>
+    <p>
+        A free Open Source Portfolio for anyone to use for free.
+    </p>
+    <ul class="work__list">
+        <li>HTML</li>
+        <li>SCSS</li>
+        <li>JavaScript</li>
+        <li>Parcel</li>
+    </ul>
+
+    <div class="work__links">
+        <a href="#" class="link__text">
+        Visit Site <span>&rarr;</span>
+        </a> 
+        <a href="https://github.com/nisarhassan12/portfolio" target="_blank">
+        <img src="./images/github.svg" class="work__code" alt="GitHub">
+        </a>
+    </div>
+    </div>
+    <div class="work__image-box">
+        <img
+            src="./images/project-1.png"
+            class="work__image"
+            alt="Project 1"
+        />
+    </div>
+</div>
+```
+
+For changing the screenshot:
+- first place the image in `images/` folder and then in HTML replace the name in `src` with the name of your image.
+
+- Recommended size for project image (1366 x 767px) also make sure the size of all  project images is the same.
+
+```html
+<img
+    src="./images/name-of-your-image.png"
+    class="work__image"
+    alt="Project 1"
+/>
+```
+
+### Clients Section
+
+- Place the logos of the clients and companies that you have worked with in `images/` directory and then replace the name in `src` with the name of your logos accordingly.
+
+- Make sure that you don't have whitespace on either side of the logos.
+
+```html
+<img
+    src="./images/your-logo.png"
+    class="client__logo"
+    alt="Your Logo"
+/>
+```
+
+### About Section
+
+- Replace the contents in the below paragraph with information about yourself.
+- Place a nice photo of yourself in the `images/` directory and then change the name in the src with your image name.
+
+```html
+<section class="about" id="about">
+    <div class="row">
+        <h2>About Me</h2>
+        <div class="about__content">
+            <div class="about__text">
+                <!-- Replace the below paragraph with info about yourself -->
+                <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos id
+                nostrum illo harum blanditiis, tenetur eum suscipit cupiditate
+                in vel, ex quam quidem quos mollitia labore aut sunt eius
+                ratione molestiae fuga veniam facere similique voluptate.
+                </p>
+                <!-- Provide a link to your resume -->
+                <a href="#" class="btn">My Resume</a>
+            </div>
+
+            <div class="about__photo-container">
+                <!-- Add a nice photo of yourself -->
+                <img
+                class="about__photo"
+                src="./images/syed-ali-hussnain.jpg"
+                alt=""
+                />
+            </div>
+        </div>
+    </div>
+</section>
+```
+
+### Contact Section
+
+- Modify the paragraph to your likings.
+- Replace the email with yours in the `href` anchor property and the text also.
+
+```html
+<section class="contact" id="contact">
+      <div class="row">
+        <h2>Get in Touch</h2>
+        <div class="contact__info">
+          <p>
+            Are you looking for a fast-performing and user-friendly website to
+            represent your product or business? or looking for any kind of
+            consultation? or want to ask questions? or have some advice for me
+            or just want to say "Hi 👋" in any case feel free to Let me know. I
+            will do my best to respond back. 😊 The quickest way to reach out to
+            me is via an email.
+          </p>
+          <!-- Replace the email with yours -->
+          <a href="mailto:you@example.com" class="btn">you@example.com</a>
+        </div>
+      </div>
+</section>
+```
+
+### Footer
+
+- Replace the `href` attribute values to your profile URLs for all anchors.
+- Remove the div with class `footer__github-buttons`.
+
+```html
+<footer role="contentinfo" class="footer">
+    <div class="row">
+        <!-- Update the links to point to your accounts -->
+        <ul class="footer__social-links">
+            <li class="footer__social-link-item">
+                <a href="https://twitter.com/nisarhassan12/">
+                    <img src="./images/twitter.svg" class="footer__social-image" alt="Twitter">
+                </a>
+            </li>
+            <li class="footer__social-link-item">
+                <a href="https://github.com/nisarhassan12/">
+                    <img src="./images/github.svg" class="footer__social-image" alt="Github">
+                </a>
+            </li>
+            <li class="footer__social-link-item">
+                <a href="https://codepen.io/nisar_hassan">
+                    <img src="./images/codepen.svg" class="footer__social-image" alt="Codepen">
+                </a>
+            </li>
+            <li class="footer__social-link-item">
+                <a href=https://www.linkedin.com/in/nisar-hassan-naqvi-413466199/">
+                    <img src="./images/linkedin.svg" class="footer__social-image" alt="Linkedin">
+                </a>
+            </li>
+        </ul>
+
+        <!-- If you give me some credit by keeping the below paragraph, will be huge for me 😊 Thanks. -->
+        <p>
+          &copy; 2020 - Template designed & developed by <a href="https://nisar.dev">Nisar</a>.
+        </p>
+        <div class="footer__github-buttons">
+          <iframe
+            src="https://ghbtns.com/github-btn.html?user=nisarhassan12&repo=portfolio-template&type=watch&count=true" 
+            frameborder="0" scrolling="0" width="170" height="20" title="Watch Portfolio Template on GitHub">
+          </iframe>
+        </div>
+    </div>
+</footer>
+```
