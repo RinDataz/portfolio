@@ -1,21 +1,28 @@
-<h1>Rinad Hassan Almjishai</h1>
-<p>Data Scientist based in Jeddah, Saudi Arabia.</p>
-<p>Email: RinadH.Almjishai@gmail.com</p>
-<p><a href="https://www.linkedin.com/in/renad-hassan-dataz/">LinkedIn</a></p>
-
-<section id="projects">
-  <div class="project">
-    <h2>Credit Card Fraud Detection Model</h2>
-    <p>Developed a machine learning model using Python and scikit-learn to detect fraudulent credit card transactions, achieving 98% accuracy.</p>
-  </div>
-  <div class="project">
-    <h2>Cyclitic Bike-Share Data Analysis</h2>
-    <p>Analyzed Cyclitic bike-share data using Python and SQL, creating reports and dashboards that enhanced operational efficiency.</p>
-  </div>
-</section>
-
-<ul id="skills">
-  <li>PyTorch, Scikit-learn, NumPy, Pandas</li>
-  <li>MySQL, SQL Server, PostgreSQL</li>
-  <li>HTML, CSS, Flask</li>
-</ul>
+title: Rinad H. Almjishai
+logo: https://media.licdn.com/dms/image/D4E03AQF0MXbsdLtq1A/profile-displayphoto-shrink_400_400/0/1714148566032?e=1726099200&v=beta&t=jrmly5IVezwjXTZr56nMo2v7R-WOssvbDM-BJBzvDhs
+description: Data Science student at the University of Jeddah, specializing in Machine Learning and Data Engineering. Passionate about FinTech and leveraging data for insights and innovation.
+author: Rinad H. Almjishai
+email: RinadH.Almjishai@gmail.com
+url: https://RinDataz.github.io/portfolio
+baseurl: "" # Leave this empty for root
+github_username: RinDataz
+linkedin_username: renad-hassan-dataz
+nav_links:
+  - name: "About Me"
+    url: "/about"
+  - name: "Projects"
+    url: "/projects"
+  - name: "Skills"
+    url: "/skills"
+  - name: "Contact"
+    url: "/contact"
+social_links:
+  github: https://github.com/RinDataz
+  linkedin: https://www.linkedin.com/in/renad-hassan-dataz/
+  email: RinadH.Almjishai@gmail.com
+remote_theme: pages-themes/minimal@v0.2.0
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
