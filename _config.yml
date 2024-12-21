@@ -1,7 +1,5 @@
 title: Rinad H. Almjishai
 description: Data Science student portfolio
-remote_theme: pages-themes/minimal@v0.2.0
-plugins:
-  - jekyll-remote-theme
-baseurl: "" # Keep this empty if the site is deployed at the root
-url: "https://RinDataz.github.io/portfolio" # Replace with your GitHub Pages URL
+# remote_theme: pages-themes/minimal@v0.2.0 # Comment this out to use your custom CSS
+baseurl: "" # Leave blank for root deployment
+url: "https://RinDataz.github.io/portfolio"
