@@ -60,9 +60,4 @@ Feel free to reach out for collaborations, mentorship opportunities, or just to 
 ---
 
 ## 🙏 **Credits**
-This portfolio was built with inspiration and guidance from [ORIGINAL CREATOR'S NAME/WEBSITE/PROJECT](https://github.com/nisarhassan12/portfolio-template?tab=readme-ov-file). Many thanks for providing a wonderful foundation to customize and expand upon!
-
----
-
-## 📜 **License**
-This project is open-source and available under the [MIT License](LICENSE).
+This portfolio was built with inspiration and guidance from [ORIGINAL CREATOR](https://github.com/nisarhassan12/portfolio-template?tab=readme-ov-file). Many thanks for providing a wonderful foundation to customize and expand upon!
