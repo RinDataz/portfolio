@@ -636,11 +636,13 @@ body:not(.user-is-tabbing) a:focus {
 
 .hackathon__image {
     width: 100%;
-    max-height: 200px;
-    object-fit: cover;
+    max-height: 300px; /* Adjust the height limit to your preference */
+    object-fit: cover; /* Ensures images scale and center without being distorted */
+    object-position: center; /* Centers the visible part of the image */
     margin: var(--gutter-small) 0;
-    border: 1px solid var(--pink);
-    border-radius: 5px;
+    border: 2px solid var(--pink);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optional for added style */
 }
 
 .hackathon__link {
