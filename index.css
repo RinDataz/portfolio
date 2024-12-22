@@ -659,8 +659,8 @@ body:not(.user-is-tabbing) a:focus {
 
 /* Certificates Section */
 .certificates {
-    background-color: var(--white-1);
-    color: var(--black);
+    background-color: var(--black);
+    color: var(--white-1);
     padding: var(--gutter-huge) 0;
 }
 
