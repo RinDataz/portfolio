@@ -625,9 +625,36 @@ body:not(.user-is-tabbing) a:focus {
     gap: var(--gutter-medium);
 }
 
+.hackathon {
+    text-align: center;
+}
+
 .hackathon h3 {
     font-size: var(--font-size-medium-1);
     margin-bottom: var(--gutter-small);
+}
+
+.hackathon__image {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    margin: var(--gutter-small) 0;
+    border: 1px solid var(--pink);
+    border-radius: 5px;
+}
+
+.hackathon__link {
+    display: inline-block;
+    margin-top: var(--gutter-small);
+    font-size: var(--font-size-small);
+    color: var(--pink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--pink);
+    transition: color 0.3s;
+}
+
+.hackathon__link:hover {
+    color: var(--white);
 }
 
 /* Certificates Section */
