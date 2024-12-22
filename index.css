@@ -666,3 +666,29 @@ body:not(.user-is-tabbing) a:focus {
     font-size: var(--font-size-small);
     margin-bottom: var(--gutter-small);
 }
+
+/* Clients/experince Section */
+.client__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--gutter-medium);
+    align-items: center;
+    text-align: center;
+  }
+  
+  .client__item {
+    margin-bottom: var(--gutter-medium);
+  }
+  
+  .client__logo {
+    height: 6.5rem;
+    max-width: 18rem;
+    margin-bottom: var(--gutter-small);
+  }
+  
+  .client__description {
+    font-size: var(--font-size-small);
+    color: var(--white-1);
+    line-height: var(--line-height-normal);
+  }
+  
