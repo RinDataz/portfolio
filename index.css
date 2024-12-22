@@ -613,50 +613,41 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 /* Hackathons Section */
-.hackathons {
-    background-color: var(--black);
-    color: var(--white-1);
-    padding: var(--gutter-huge) 0;
-}
-
-.hackathons__content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--gutter-medium);
-}
-
 .hackathon {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    margin-bottom: 25rem;
 }
 
-.hackathon h3 {
-    font-size: var(--font-size-medium-1);
-    margin-bottom: var(--gutter-small);
+@media(max-width: 900px) {
+    .hackathon {
+        align-items: initial;
+        flex-direction: column-reverse;
+    }
+}
+
+.hackathon:not(:last-child) {
+    margin-bottom: 25rem;
+}
+
+.hackathon__text {
+    flex: 0 0 30%;
+}
+
+.hackathon__image-box {
+    margin-bottom: var(--gutter-normal);
+}
+
+@media(min-width: 901px) {
+    .hackathon__image-box {
+        flex: 1;
+        margin: 0 0 0 10rem;
+    }
 }
 
 .hackathon__image {
-    width: 100%;
-    max-height: 300px; /* Adjust the height limit to your preference */
-    object-fit: cover; /* Ensures images scale and center without being distorted */
-    object-position: center; /* Centers the visible part of the image */
-    margin: var(--gutter-small) 0;
-    border: 2px solid var(--pink);
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optional for added style */
-}
-
-.hackathon__link {
-    display: inline-block;
-    margin-top: var(--gutter-small);
-    font-size: var(--font-size-small);
-    color: var(--pink);
-    text-decoration: none;
-    border-bottom: 1px solid var(--pink);
-    transition: color 0.3s;
-}
-
-.hackathon__link:hover {
-    color: var(--white);
+    object-fit: contain;
+    max-width: 100%;
 }
 
 /* Certificates Section */
