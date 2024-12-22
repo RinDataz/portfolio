@@ -667,7 +667,7 @@ body:not(.user-is-tabbing) a:focus {
     margin-bottom: var(--gutter-small);
 }
 
-/* Clients/experince Section */
+/* Clients Section */
 .client__container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
