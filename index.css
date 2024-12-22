@@ -611,3 +611,38 @@ body:not(.user-is-tabbing) a:focus {
         padding: var(--gutter-medium) 0;
     } 
 }
+
+/* Hackathons Section */
+.hackathons {
+    background-color: var(--black);
+    color: var(--white-1);
+    padding: var(--gutter-huge) 0;
+}
+
+.hackathons__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--gutter-medium);
+}
+
+.hackathon h3 {
+    font-size: var(--font-size-medium-1);
+    margin-bottom: var(--gutter-small);
+}
+
+/* Certificates Section */
+.certificates {
+    background-color: var(--white-1);
+    color: var(--black);
+    padding: var(--gutter-huge) 0;
+}
+
+.certificates__list {
+    list-style: none;
+    padding: 0;
+}
+
+.certificates__list li {
+    font-size: var(--font-size-small);
+    margin-bottom: var(--gutter-small);
+}
