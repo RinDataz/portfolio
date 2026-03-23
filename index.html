@@ -1,340 +1,488 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
+  <title>Rinad Almjishai</title>
+  <meta name="description" content="Rinad Almjishai — Product Analyst, AI Strategist, Consultant. Jeddah, Saudi Arabia." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Outfit:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0E0E10;
+      --surface: #161618;
+      --surface2: #1E1E21;
+      --border: rgba(255,255,255,0.07);
+      --border-hover: rgba(255,255,255,0.14);
+      --text: #E8E6E1;
+      --text-muted: #7A7875;
+      --text-dim: #4A4845;
+      --accent: #C97B4B;
+      --accent-dim: rgba(201,123,75,0.12);
+      --font-serif: 'Lora', Georgia, serif;
+      --font-sans: 'Outfit', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { font-size: 62.5%; scroll-behavior: smooth; }
+    body { font-family: var(--font-sans); background: var(--bg); color: var(--text); font-size: 1.6rem; line-height: 1.65; overflow-x: hidden; }
 
-  <!-- Put your site title here -->
-  <title>
-   Rinad Almjishai | A Data Scienctist based in Jeddah, Saudi Arabia.
-  </title>
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; display: flex; justify-content: space-between; align-items: center; padding: 1.8rem 5rem; background: rgba(14,14,16,0.88); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); }
+    .nav-logo { font-family: var(--font-serif); font-size: 1.7rem; color: var(--text); text-decoration: none; }
+    .nav-links { display: flex; list-style: none; gap: 3.2rem; }
+    .nav-links a { font-family: var(--font-mono); font-size: 1.1rem; letter-spacing: 0.08em; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-cta { font-family: var(--font-mono); font-size: 1.1rem; letter-spacing: 0.08em; color: var(--accent); text-decoration: none; border: 1px solid var(--accent); padding: 0.7rem 1.8rem; transition: all 0.2s; }
+    .nav-cta:hover { background: var(--accent); color: var(--bg); }
 
-  <meta name="description" content="Junior data scientist">
-  <!-- Add some coding keywords below, Ex: (React, CSS etc) -->
-  <meta name="keywords" content="Rinad Almjishai,Data Science, Machine Learning (ML), Artificial Intelligence (AI), Predictive Modeling, Data Visualization, Statistical Analysis, Exploratory Data Analysis (EDA), Feature Engineering, Big Data Analytics, Data Pipelines, Python, R, SQL, PyTorch, TensorFlow, Scikit-learn, NumPy, Pandas, Matplotlib, Seaborn, FinTech, Fraud Detection, Recommendation Systems, Sentiment Analysis, Natural Language Processing (NLP), Computer Vision, Business Intelligence (BI), Time Series Forecasting, Data Engineering, Cloud Computing, AWS (Amazon Web Services), Google Cloud Platform (GCP), Microsoft Azure, Docker, Kubernetes, Apache Spark, Tableau, Power BI, Jupyter Notebook, Git, Problem Solving, Analytical Thinking, Communication Skills, Team Collaboration, Project Management, Financial Data Analysis, Credit Risk Modeling, Fraud Detection in Banking, Blockchain Technology, Algorithmic Trading, Customer Segmentation, Churn Prediction, Payment Processing Analytics, Portfolio Optimization, Regulatory Compliance, Innovation, Insight-Driven Solutions, Data-Driven Decisions, Impactful Analytics, Next-Gen Technology, Real-Time Insights, Scalable Solutions, Agile Analytics." />
-  <link rel="stylesheet" href="index.css" />
+    .page-wrap { max-width: 110rem; margin: 0 auto; padding: 0 5rem; }
+
+    .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 14rem 0 8rem; border-bottom: 1px solid var(--border); }
+    .hero-label { font-family: var(--font-mono); font-size: 1.1rem; letter-spacing: 0.15em; color: var(--accent); margin-bottom: 2.8rem; display: flex; align-items: center; gap: 1.2rem; }
+    .hero-label::before { content: ''; display: inline-block; width: 2.4rem; height: 1px; background: var(--accent); }
+    .hero-heading { font-family: var(--font-serif); font-size: clamp(4.8rem, 8vw, 9.6rem); font-weight: 500; line-height: 1.0; letter-spacing: -0.02em; color: var(--text); margin-bottom: 3.2rem; }
+    .hero-heading em { font-style: italic; color: var(--accent); }
+    .hero-sub { font-size: 1.9rem; color: var(--text-muted); font-weight: 300; max-width: 58rem; line-height: 1.8; margin-bottom: 5rem; }
+    .hero-sub strong { color: var(--text); font-weight: 400; }
+    .hero-actions { display: flex; gap: 2rem; flex-wrap: wrap; }
+    .btn { font-family: var(--font-mono); font-size: 1.1rem; letter-spacing: 0.08em; text-decoration: none; padding: 1.2rem 2.8rem; border: 1px solid; transition: all 0.2s; display: inline-block; }
+    .btn-fill { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+    .btn-fill:hover { background: transparent; color: var(--accent); }
+    .btn-outline { color: var(--text-muted); border-color: var(--border-hover); }
+    .btn-outline:hover { color: var(--text); border-color: var(--text-muted); }
+
+    .section { padding: 9rem 0; border-bottom: 1px solid var(--border); }
+    .section-eyebrow { font-family: var(--font-mono); font-size: 1rem; letter-spacing: 0.18em; color: var(--text-dim); text-transform: uppercase; margin-bottom: 1.6rem; display: flex; align-items: center; gap: 1.2rem; }
+    .section-eyebrow::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+    .section-title { font-family: var(--font-serif); font-size: clamp(3.2rem, 5vw, 5.2rem); font-weight: 500; letter-spacing: -0.02em; color: var(--text); margin-bottom: 6rem; line-height: 1.1; }
+
+    .timeline { display: flex; flex-direction: column; }
+    .timeline-item { display: grid; grid-template-columns: 20rem 1fr; border-top: 1px solid var(--border); padding: 3.5rem 0; opacity: 0; transform: translateY(16px); transition: opacity 0.5s ease, transform 0.5s ease; }
+    .timeline-item.visible { opacity: 1; transform: translateY(0); }
+    .timeline-item:last-child { border-bottom: 1px solid var(--border); }
+    .timeline-left { padding-right: 4rem; padding-top: 0.4rem; }
+    .timeline-date { font-family: var(--font-mono); font-size: 1.1rem; color: var(--text-dim); letter-spacing: 0.04em; margin-bottom: 0.8rem; line-height: 1.5; }
+    .timeline-tag { display: inline-block; font-family: var(--font-mono); font-size: 0.9rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.3rem 0.9rem; background: var(--accent-dim); color: var(--accent); border: 1px solid rgba(201,123,75,0.25); }
+    .timeline-tag.now { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+    .timeline-role { font-family: var(--font-serif); font-size: 2.2rem; font-weight: 500; color: var(--text); letter-spacing: -0.01em; margin-bottom: 0.4rem; }
+    .timeline-org { font-family: var(--font-mono); font-size: 1.1rem; color: var(--text-muted); letter-spacing: 0.05em; margin-bottom: 1.4rem; }
+    .timeline-desc { font-size: 1.5rem; color: var(--text-muted); line-height: 1.8; max-width: 68rem; font-weight: 300; margin-bottom: 1.6rem; }
+    .chips { display: flex; flex-wrap: wrap; gap: 0.8rem; }
+    .chip { font-family: var(--font-mono); font-size: 1rem; padding: 0.4rem 1rem; border: 1px solid var(--border); color: var(--text-dim); letter-spacing: 0.04em; }
+
+    .skills-bg { background: var(--surface); }
+    .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); }
+    .skill-col { background: var(--surface); padding: 4rem 3.5rem; }
+    .skill-col-title { font-family: var(--font-mono); font-size: 1rem; text-transform: uppercase; letter-spacing: 0.18em; color: var(--accent); margin-bottom: 3rem; }
+    .skill-col ul { list-style: none; display: flex; flex-direction: column; gap: 1.4rem; }
+    .skill-col li { font-size: 1.5rem; color: var(--text-muted); font-weight: 300; display: flex; align-items: center; gap: 1rem; }
+    .skill-col li::before { content: '·'; color: var(--accent); font-size: 2rem; line-height: 1; }
+
+    .projects-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); }
+    .project-card { background: var(--bg); padding: 4rem; transition: background 0.25s; }
+    .project-card:hover { background: var(--surface); }
+    .project-num { font-family: var(--font-mono); font-size: 1rem; color: var(--text-dim); letter-spacing: 0.1em; margin-bottom: 2rem; }
+    .project-title { font-family: var(--font-serif); font-size: 2.4rem; font-weight: 500; letter-spacing: -0.02em; color: var(--text); margin-bottom: 1.4rem; line-height: 1.2; }
+    .project-desc { font-size: 1.5rem; color: var(--text-muted); line-height: 1.8; font-weight: 300; margin-bottom: 2.4rem; }
+    .project-links { display: flex; gap: 2.4rem; }
+    .project-links a { font-family: var(--font-mono); font-size: 1.1rem; color: var(--text-muted); text-decoration: none; letter-spacing: 0.06em; border-bottom: 1px solid var(--border); padding-bottom: 0.2rem; transition: color 0.2s, border-color 0.2s; }
+    .project-links a:hover { color: var(--accent); border-color: var(--accent); }
+
+    .hack-list { display: flex; flex-direction: column; }
+    .hack-item { display: grid; grid-template-columns: 8rem 1fr; gap: 4rem; border-top: 1px solid var(--border); padding: 3.5rem 0; align-items: start; opacity: 0; transform: translateY(12px); transition: opacity 0.4s ease, transform 0.4s ease; }
+    .hack-item.visible { opacity: 1; transform: translateY(0); }
+    .hack-item:last-child { border-bottom: 1px solid var(--border); }
+    .hack-place { font-family: var(--font-serif); font-size: 3.2rem; font-weight: 500; color: var(--accent); line-height: 1; padding-top: 0.4rem; }
+    .hack-title { font-family: var(--font-serif); font-size: 2.2rem; font-weight: 500; color: var(--text); letter-spacing: -0.01em; margin-bottom: 0.6rem; }
+    .hack-org { font-family: var(--font-mono); font-size: 1rem; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.2rem; }
+    .hack-desc { font-size: 1.5rem; color: var(--text-muted); font-weight: 300; line-height: 1.75; max-width: 62rem; }
+
+    .awards-bg { background: var(--surface); }
+    .awards-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); }
+    .award-card { background: var(--surface); padding: 4rem; }
+    .award-title { font-family: var(--font-serif); font-size: 2rem; font-weight: 500; color: var(--text); letter-spacing: -0.01em; margin-bottom: 0.6rem; }
+    .award-org { font-family: var(--font-mono); font-size: 1rem; color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1.4rem; }
+    .award-desc { font-size: 1.4rem; color: var(--text-muted); font-weight: 300; line-height: 1.7; }
+
+    .cert-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); }
+    .cert-card { background: var(--bg); padding: 2.8rem; transition: background 0.2s; }
+    .cert-card:hover { background: var(--surface); }
+    .cert-name { font-family: var(--font-serif); font-size: 1.7rem; font-weight: 500; color: var(--text); text-decoration: none; display: block; margin-bottom: 0.6rem; transition: color 0.2s; }
+    .cert-card:hover .cert-name { color: var(--accent); }
+    .cert-issuer { font-family: var(--font-mono); font-size: 1rem; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+
+    .about-grid { display: grid; grid-template-columns: 1fr 38rem; gap: 8rem; align-items: start; }
+    .about-body { font-family: var(--font-serif); font-size: 2rem; line-height: 1.8; color: var(--text-muted); }
+    .about-body strong { color: var(--text); font-weight: 500; }
+    .about-body em { font-style: italic; color: var(--accent); }
+    .about-body p + p { margin-top: 2.4rem; }
+    .about-aside { display: flex; flex-direction: column; }
+    .about-row { display: flex; flex-direction: column; gap: 0.4rem; padding: 2rem 0; border-top: 1px solid var(--border); }
+    .about-row:last-child { border-bottom: 1px solid var(--border); }
+    .about-label { font-family: var(--font-mono); font-size: 1rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-dim); }
+    .about-val { font-size: 1.5rem; color: var(--text-muted); font-weight: 300; }
+
+    .contact-split { display: grid; grid-template-columns: 1fr 1fr; gap: 8rem; align-items: start; }
+    .contact-intro { font-family: var(--font-serif); font-size: 2.4rem; font-weight: 500; color: var(--text); line-height: 1.4; letter-spacing: -0.02em; margin-bottom: 2.4rem; }
+    .contact-sub { font-size: 1.5rem; color: var(--text-muted); font-weight: 300; line-height: 1.8; margin-bottom: 3.5rem; }
+    .contact-links { display: flex; flex-direction: column; }
+    .contact-link { display: flex; align-items: center; justify-content: space-between; padding: 1.8rem 0; border-bottom: 1px solid var(--border); text-decoration: none; transition: border-color 0.2s; }
+    .contact-link:first-child { border-top: 1px solid var(--border); }
+    .contact-link:hover { border-bottom-color: var(--accent); }
+    .contact-link-label { font-family: var(--font-mono); font-size: 1rem; color: var(--text-dim); letter-spacing: 0.12em; text-transform: uppercase; }
+    .contact-link-val { font-size: 1.5rem; color: var(--text-muted); font-weight: 300; }
+    .contact-link:hover .contact-link-val { color: var(--accent); }
+    .contact-link-arrow { color: var(--text-dim); font-size: 1.4rem; transition: color 0.2s, transform 0.2s; }
+    .contact-link:hover .contact-link-arrow { color: var(--accent); transform: translate(3px,-3px); }
+
+    footer { padding: 3rem 5rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); }
+    .footer-name { font-family: var(--font-serif); font-size: 1.6rem; color: var(--text-muted); }
+    .footer-copy { font-family: var(--font-mono); font-size: 1rem; color: var(--text-dim); letter-spacing: 0.08em; }
+
+    .btt { position: fixed; bottom: 3.5rem; right: 3.5rem; width: 4.4rem; height: 4.4rem; background: var(--surface2); border: 1px solid var(--border); color: var(--text-muted); display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 1.6rem; opacity: 0; visibility: hidden; transition: all 0.3s; z-index: 99; }
+    .btt.show { opacity: 1; visibility: visible; }
+    .btt:hover { border-color: var(--accent); color: var(--accent); }
+
+    .fade { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade.visible { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 1024px) {
+      nav { padding: 1.8rem 3rem; } .nav-links { gap: 2.4rem; }
+      .page-wrap { padding: 0 3rem; }
+      .hero { padding: 12rem 0 8rem; }
+      .skills-grid { grid-template-columns: 1fr 1fr; }
+      .about-grid { grid-template-columns: 1fr; gap: 5rem; }
+      .contact-split { grid-template-columns: 1fr; gap: 5rem; }
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .projects-grid { grid-template-columns: 1fr; }
+      .awards-grid { grid-template-columns: 1fr; }
+      .cert-grid { grid-template-columns: 1fr 1fr; }
+      .timeline-item { grid-template-columns: 1fr; gap: 1.2rem; }
+      .timeline-left { padding-right: 0; }
+      .skills-grid { grid-template-columns: 1fr; }
+      .hack-item { grid-template-columns: 5rem 1fr; gap: 2.5rem; }
+      footer { flex-direction: column; gap: 1rem; text-align: center; }
+    }
+    @media (max-width: 500px) {
+      .cert-grid { grid-template-columns: 1fr; }
+      .hero-heading { font-size: 4.4rem; }
+    }
+  </style>
 </head>
-
 <body>
 
- <!-- ***** Header ***** -->
-<header class="header" role="banner" id="top">
-  <div class="row">
-    <nav class="nav" role="navigation">
-      <ul class="nav__items">
-        <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-        <li class="nav__item"><a href="#clients" class="nav__link">Experience</a></li>
-        <li class="nav__item"><a href="#hackathons" class="nav__link">Hackathons</a></li>
-        <li class="nav__item"><a href="#certificates" class="nav__link">Certificates</a></li>
-        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-  <div class="header__text-box row">
-    <div class="header__text">
-      <h1 class="heading-primary">
+<nav>
+  <a href="#top" class="nav-logo">Rinad Almjishai</a>
+  <ul class="nav-links">
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#hackathons">Hackathons</a></li>
+    <li><a href="#awards">Awards</a></li>
+    <li><a href="#about">About</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Say hello</a>
+</nav>
 
-
-        <!-- Replace the following name with your name -->
-        <span>Rinad Almjishai</span>
-      </h1>
-      <!-- Put a small paragraph about yourself -->
-      <p>A Data Scientist bringing AI and data innovation to Saudi Arabia's fintech landscape.</p>
-      <a href="#contact" class="btn btn--pink">Get in touch</a>
+<div class="page-wrap">
+  <section class="hero" id="top">
+    <p class="hero-label">Jeddah, Saudi Arabia</p>
+    <h1 class="hero-heading">Rinad<br><em>Almjishai</em></h1>
+    <p class="hero-sub">I work at the intersection of <strong>data, product, and strategy</strong> — helping organizations in the GCC build things that are technically sound, culturally intelligent, and genuinely useful.</p>
+    <div class="hero-actions">
+      <a href="#experience" class="btn btn-fill">View my work</a>
+      <a href="#contact" class="btn btn-outline">Get in touch</a>
     </div>
-  </div>
-</header>
+  </section>
+</div>
 
-  <main role="main">
+<div class="page-wrap">
+  <section class="section" id="experience">
+    <p class="section-eyebrow fade">Experience</p>
+    <h2 class="section-title fade">Where I've been</h2>
+    <div class="timeline">
 
-    <!-- ***** Work ***** -->
-
-    <section class="work" id="work">
-      <div class="row">
-        <h2>My Work</h2>
-        <div class="work__boxes">
-
-          <!-- Each div with the work__box class is a project. -->
-
-        <!-- first project , asl-->
-          <div class="work__box">
-            <div class="work__text">
-              <h3>ASL Translation System</h3>
-              <p>
-                American Sign Language (ASL) translation system developed during the Samsung Innovation Campus x Misk Foundation AI Program!
-                Yad-tech uses a two-part approach to bring ASL into real-time text. For static gestures, we trained a CNN model, while a Random Forest model handles real-time recognition. This combination allowed us to create a smooth, responsive experience where static signs are accurately interpreted, and dynamic gestures are handled in real-time.
-              </p>
-              <ul class="work__list">
-                <li>Python</li>
-                <li>Machine learning</li>
-                <li>Classification</li>
-                <li>Scikit-learn</li>
-                <li>Neural networks</li>
-              </ul>
-
-              <div class="work__links">
-                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7262072075505356800?updateEntityUrn=urn%3Ali%3Afs_updateV2%3A%28urn%3Ali%3Aactivity%3A7262072075505356800%2CFEED_DETAIL%2CEMPTY%2CDEFAULT%2Cfalse%29&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BnMW7EiiLSnyIYHqWKB38dA%3D%3D" target="_blank" class="link__text">
-                  View demo <span>&rarr;</span>
-                </a>
-                <a href="https://github.com/RinDataz/ASL_Translation_System" title="View Source Code" target="_blank">
-                  <img src="./images/github.svg" class="work__code" alt="GitHub">
-                </a>
-              </div>
-            </div>
-            <div class="work__image-box">
-              <img src="./images/project-1.png" class="work__image" alt="Project 1" />
-            </div>
-          </div>
-
-          <!-- 2nd project , credit -->
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Credit Card Fraud Detection Model</h3>
-              <p>
-                Developed a machine learning model using Python and scikit-learn to detect fraudulent credit card transactions, achieving 98% accuracy. 
-              </p>
-              <ul class="work__list">
-                <li>Matplotlib</li>
-                <li>Pandas</li>
-                <li>NumPy</li>
-                <li>Financial Analysis</li>
-                <li>Feature engineering</li>
-              </ul>
-
-              <div class="work__links">
-                <a href="https://www.kaggle.com/code/renadhassan/freud-detection/notebook?scriptVersionId=193807378">
-                  <img src="./images/github.svg" class="work__code" title="View Source Code" alt="GitHub">
-                </a>
-              </div>    
-            </div>
-            <div class="work__image-box">
-              <img src="./images/project-2.png" class="work__image" alt="Project 1" />
-            </div>
-          </div>
-
-          <!-- 3rd project-->
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Cyclitic Bike-Share Data Analysis</h3>
-              <p>
-                Analyzed Cyclitic bike-share data using Python and SQL, creating reports and dashboards that enhanced operational efficiency and boosted ridership. 
-              </p>
-              <ul class="work__list">
-                <li>Predictive Modeling</li>
-                <li>Data Analysis</li>
-                <li>PowerBI</li>
-                <li>SQL</li>
-                <li>Data Preprocessing</li>
-              </ul>
-
-              <div class="work__links">
-                <a href="https://github.com/RinDataz/Google-Data-Analytics-Capstone-Cyclistic-Case-Study">
-                  <img src="./images/github.svg" class="work__code" title="View Source Code" alt="GitHub">
-                </a>
-              </div>
-            </div>
-            <div class="work__image-box">
-              <img src="./images/project-3.png" class="work__image" alt="Project 3" />
-            </div>
-          </div>
+      <div class="timeline-item">
+        <div class="timeline-left"><div class="timeline-date">Mar 2026 — Present</div><span class="timeline-tag now">Now</span></div>
+        <div>
+          <div class="timeline-role">Consultant</div>
+          <div class="timeline-org">Task Force Global · Consulting Capability Development</div>
+          <p class="timeline-desc">Participating in an intensive consulting capability development program — building structured problem solving, strategy, and client engagement skills through real hands-on program work.</p>
+          <div class="chips"><span class="chip">Structured Thinking</span><span class="chip">Strategy</span><span class="chip">Client Engagement</span></div>
         </div>
       </div>
-    </section>
 
-    <main role="main">
-
-      <section class="hackathons" id="hackathons">
-        <div class="row">
-            <h2>Hackathons</h2>
-            <div class="hackathons__content">
-                <!-- Hackathon 1 -->
-                <div class="hackathon">
-                    <div class="hackathon__text">
-                        <h3>SDAIA X Microsoft Imagine Cup Hackathon 2024</h3>
-                        <p>
-                          Placed 3rd at the university level and advanced to the country-level round. 
-                          Collaborated with a multidisciplinary team to create an AI-powered mental health support app, contributing primarily to backend development and machine learning model integration.
-                        </p>
-                        <a href="https://imaginecup.microsoft.com" target="_blank" class="hackathon__link">Learn More</a>
-                    </div>
-                    <div class="hackathon__image-box">
-                        <img src="images/1.png" alt="Imagine Cup Hackathon" class="hackathon__image" />
-                    </div>
-                </div>
-    
-                <!-- Hackathon 2 -->
-                <div class="hackathon">
-                    <div class="hackathon__text">
-                        <h3>Beyond X UJ </h3>
-                        <p>
-                          Our blockchain-powered crowdfunding platform, Sarrah | سرح, secured 3rd place in the Fintech track at the Launched Bootcamp. The platform aims to introduce blockchain-based crowdfunding to Saudi Arabia, supporting SMEs and entrepreneurs in accessing innovative funding solutions. Leveraging smart contracts for secure transactions and targeting global marketing outreach, Sarrah | سرح stands out as a future-ready solution. I contributed to developing the idea and delivered the pitch that showcased its potential to the judges.
-                        </p>
-                        <a href="https://www.linkedin.com/posts/renad-hassan-dataz_fintech-launchedbootcamp-beyondxuj-activity-7245436850427842561-KU4I?utm_source=share&utm_medium=member_desktop" target="_blank" class="hackathon__link">Pitch snippet</a>
-                    </div>
-                    <div class="hackathon__image-box">
-                        <img src="./images/2.png" alt="SDAIA Hackathon" class="hackathon__image" />
-                    </div>
-                </div>
-            </div>
+      <div class="timeline-item">
+        <div class="timeline-left"><div class="timeline-date">Oct 2025 — Present</div><span class="timeline-tag now">Now</span></div>
+        <div>
+          <div class="timeline-role">Product Analyst</div>
+          <div class="timeline-org">Confidential · GCC Government Super-App</div>
+          <p class="timeline-desc">End-to-end product documentation across 10+ modules — 30+ user stories and 200+ test cases built from scratch. Took full ownership of cultural anchoring: localizing UI/UX copy and HR policy for Saudi/GCC users, adapting flows for Arabic speakers, and bridging Arabic and English stakeholders across leadership, HR, IT, and engineering teams.</p>
+          <div class="chips"><span class="chip">Product Docs</span><span class="chip">Functional Testing</span><span class="chip">UX Localization</span><span class="chip">AR/EN Bridging</span><span class="chip">Stakeholder Management</span></div>
         </div>
-    </section>
-    
-    <!-- ***** Certificates ***** -->
-<section class="certificates" id="certificates">
-  <div class="row">
-    <h2>Certificates</h2>
-    <ul class="certificates__list">
-      <li>
-        <a href="https://www.coursera.org/account/accomplishments/specialization/5D592SYI6KB0" target="_blank">Certified Machine Learning Specialist - DeepLearning.AI</a>
-      </li>
-      <li>
-        <a href="https://www.coursera.org/account/accomplishments/specialization/AVGKW6CUOYLC" target="_blank">Data Science Professional - IBM</a>
-      </li>
-      <li>
-        <a href="https://www.coursera.org/account/accomplishments/specialization/YQNQKZESFUN2" target="_blank">IBM AI Engineering Specialization - IBM</a>
-      </li>
-      <li>
-        <a href="https://www.coursera.org/account/accomplishments/specialization/KGKQJMJSJXPX" target="_blank">IBM AI Developer Specialization - IBM</a>
-      </li>
-      <li>
-        <a href="https://www.credly.com/badges/b2dbd015-695c-4de7-82d6-45acfac1cb0c/linked_in_profile" target="_blank">Google Data Analytics Specialization - Google</a>
-      </li>
-      <li>
-        <a href="https://www.linkedin.com/in/renad-hassan-dataz/details/certifications/1723566779636/single-media-viewer?type=DOCUMENT&profileId=ACoAADuXfXoBYcwuMl63rPgYMiDDxcGdyroWEPw&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BtXRmpnhaTRuDo1M8KI3VSg%3D%3D" target="_blank">Data Science Learning Pathway Level 3 (Advanced) - Saudi Digital Academy</a>
-      </li>
-      <li>
-        <a href="https://www.coursera.org/account/accomplishments/records/INL5FXOJDAUF" target="_blank">FinTech Foundations and Overview - The Hong Kong University of Science and Technology</a>
-      </li>
-    </ul>
-  </div>
-</section>
-
-    
-<!--Experince section-->
-
-<section class="client" id="clients">
-  <div class="row">
-    <h2>Experience</h2>
-    <div class="client__container">
-
-      <div class="client__item">
-        <img src="./images/SIC.png" class="client__logo" alt="Samsung Innovation Campus" />
-        <p class="client__description">
-          Trained under the Samsung Innovation Campus X Misk AI Program.
-        </p>
       </div>
 
-
-      <div class="client__item">
-        <img src="./images/SDAIA.png" class="client__logo" alt="SDAIA" />
-        <p class="client__description">
-          Trained in SDAIA's LLM (Large Language Models) Program.
-        </p>
+      <div class="timeline-item">
+        <div class="timeline-left"><div class="timeline-date">Oct 2025 — Mar 2026</div><span class="timeline-tag">6 months</span></div>
+        <div>
+          <div class="timeline-role">AI Strategy Consultant</div>
+          <div class="timeline-org">Synapse</div>
+          <p class="timeline-desc">Designed Synapse's 2-year AI Solutions strategy — operating model, governance structure, hiring plan, capability maturity roadmap, and delivery frameworks across generative AI, machine learning, and automation.</p>
+          <div class="chips"><span class="chip">AI Strategy</span><span class="chip">Operating Models</span><span class="chip">Governance</span><span class="chip">GenAI</span></div>
+        </div>
       </div>
 
-
-      <div class="client__item">
-        <img src="./images/Wathba.png" class="client__logo" alt="Wathba Initiative" />
-        <p class="client__description">
-          Mentee in Wathba's Impact Makers Program.
-        </p>
+      <div class="timeline-item">
+        <div class="timeline-left"><div class="timeline-date">Sep 2025 — Jan 2026</div><span class="timeline-tag">5 months</span></div>
+        <div>
+          <div class="timeline-role">Consulting Trainee</div>
+          <div class="timeline-org">Fateel · Apprenticeship</div>
+          <p class="timeline-desc">Applied structured frameworks to real client challenges through an intensive apprenticeship — building skills in problem structuring, synthesis, and strategic communication.</p>
+          <div class="chips"><span class="chip">Problem Structuring</span><span class="chip">Client Analysis</span><span class="chip">Frameworks</span></div>
+        </div>
       </div>
 
-      <div class="client__item">
-        <img src="./images/Dulani.png" class="client__logo" alt="Dulani Initiative" />
-        <p class="client__description">
-          Leader and Founder of the Dulani Initiative.
-        </p>
+      <div class="timeline-item">
+        <div class="timeline-left"><div class="timeline-date">Jun 2025 — Sep 2025</div><span class="timeline-tag">3 months</span></div>
+        <div>
+          <div class="timeline-role">Data Scientist</div>
+          <div class="timeline-org">Eddekhar · Full-time, Riyadh</div>
+          <p class="timeline-desc">Contributed across the full data stack — backend development, data warehousing, API design, and user testing. Built financial health dashboards, onboarding insight reports, and employee segmentation models to support leadership decisions.</p>
+          <div class="chips"><span class="chip">Python</span><span class="chip">SQL</span><span class="chip">Data Warehousing</span><span class="chip">Dashboards</span><span class="chip">API Design</span></div>
+        </div>
       </div>
 
-      <div class="client__item">
-        <img src="./images/GDSC.png" class="client__logo" alt="Google Developer Student Clubs" />
-        <p class="client__description">
-          Co-leader of the content and design department at GDSC (Google Developer Student Clubs)
-        </p>
+      <div class="timeline-item">
+        <div class="timeline-left"><div class="timeline-date">Aug 2024 — Sep 2025</div><span class="timeline-tag">1 yr 2 mos</span></div>
+        <div>
+          <div class="timeline-role">Project Management Lead</div>
+          <div class="timeline-org">Synapse · Jeddah, Hybrid</div>
+          <p class="timeline-desc">Led a 16-member cross-functional team across design, engineering, training, and content — delivering 5 AI and technology programs to 500+ beneficiaries across Saudi Arabia, and building 5+ strategic partnerships that grew Synapse's reach to 3,000+ users.</p>
+          <div class="chips"><span class="chip">Program Management</span><span class="chip">Partnerships</span><span class="chip">Cross-functional Leadership</span></div>
+        </div>
       </div>
 
-      <div class="client__item">
-        <img src="./images/STC.png" class="client__logo" alt="STC Virtual Work Experience" />
-        <p class="client__description">
-          Misk X STC Virtual Work Experience program.
-        </p>
+      <div class="timeline-item">
+        <div class="timeline-left"><div class="timeline-date">Mar 2025 — May 2025</div><span class="timeline-tag">3 months</span></div>
+        <div>
+          <div class="timeline-role">Forward Program Graduate</div>
+          <div class="timeline-org">McKinsey & Company</div>
+          <p class="timeline-desc">Completed McKinsey's competitive Forward Program — structured thinking, data storytelling, resilience, and professional effectiveness using McKinsey's problem-solving frameworks.</p>
+          <div class="chips"><span class="chip">McKinsey Frameworks</span><span class="chip">Data Storytelling</span></div>
+        </div>
       </div>
 
+      <div class="timeline-item">
+        <div class="timeline-left"><div class="timeline-date">Aug 2024 — Nov 2024</div><span class="timeline-tag">4 months</span></div>
+        <div>
+          <div class="timeline-role">AI Innovation Trainee</div>
+          <div class="timeline-org">Samsung Innovation Campus</div>
+          <p class="timeline-desc">Selected as one of fewer than 100 participants nationwide for Samsung's intensive AI program covering data processing, machine learning, and deep learning.</p>
+          <div class="chips"><span class="chip">ML / DL</span><span class="chip">Data Processing</span><span class="chip">AI Applications</span></div>
+        </div>
+      </div>
 
+      <div class="timeline-item">
+        <div class="timeline-left"><div class="timeline-date">Jul 2024 — Oct 2024</div><span class="timeline-tag">4 months</span></div>
+        <div>
+          <div class="timeline-role">Founder & Leader</div>
+          <div class="timeline-org">Dulani Initiative</div>
+          <p class="timeline-desc">Founded and led a student mentorship program — managed 29 mentors who delivered 184+ hours of academic guidance to 125 students, achieving a 94% satisfaction rate.</p>
+          <div class="chips"><span class="chip">Leadership</span><span class="chip">Program Design</span><span class="chip">Mentorship</span></div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-left"><div class="timeline-date">Feb 2024 — Nov 2025</div><span class="timeline-tag">1 yr 10 mos</span></div>
+        <div>
+          <div class="timeline-role">Digital Media & Content Lead</div>
+          <div class="timeline-org">Google Developers Group · Part-time</div>
+          <p class="timeline-desc">Co-led the design team establishing the club's visual identity and content strategy — driving consistent brand presence and community engagement across digital platforms.</p>
+          <div class="chips"><span class="chip">Content Strategy</span><span class="chip">Visual Identity</span><span class="chip">Community</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+<section class="section skills-bg" id="skills">
+  <div class="page-wrap">
+    <p class="section-eyebrow fade">Skills</p>
+    <h2 class="section-title fade">What I work with</h2>
+    <div class="skills-grid fade">
+      <div class="skill-col">
+        <div class="skill-col-title">Strategy & Consulting</div>
+        <ul>
+          <li>Structured problem solving</li><li>Market &amp; competitor research</li><li>Business case development</li><li>KPI architecture</li><li>Operating model design</li><li>Executive communication</li><li>Stakeholder management</li>
+        </ul>
+      </div>
+      <div class="skill-col">
+        <div class="skill-col-title">Product & Design</div>
+        <ul>
+          <li>User story writing</li><li>Functional &amp; UAT testing</li><li>UX localization (AR / EN)</li><li>UI copy &amp; content design</li><li>Agile · Jira · Confluence</li><li>Cultural anchoring (GCC)</li><li>Accessibility testing</li>
+        </ul>
+      </div>
+      <div class="skill-col">
+        <div class="skill-col-title">Data & AI</div>
+        <ul>
+          <li>Python &amp; SQL</li><li>Machine learning &amp; deep learning</li><li>LLM applications</li><li>Tableau &amp; Power BI</li><li>Statistical modeling</li><li>Data warehousing</li><li>Financial analysis</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
 
-
-    <!-- ***** About ***** -->
-    <section class="about" id="about">
-      <div class="row">
-        <h2>About Me</h2>
-        <div class="about__content">
-          <div class="about__text">
-            <p>
-              I’m a data scientist passionate about blending AI, machine learning, and data solutions to drive impact in fintech and beyond.
-              With a focus on innovation and problem-solving, I thrive on turning data into meaningful insights.
-            </p>
-            <a href="#" class="btn">My Resume</a>
-          </div>
-          <div class="about__photo-container">
-            <img class="about__photo" src="./images/Rinad-Almjishai.jpg" alt="Rinad Almjishai" />
-          </div>
-        </div>
+<div class="page-wrap">
+  <section class="section" id="projects">
+    <p class="section-eyebrow fade">Projects</p>
+    <h2 class="section-title fade">Things I've built</h2>
+    <div class="projects-grid fade">
+      <div class="project-card">
+        <div class="project-num">01</div>
+        <h3 class="project-title">ASL Translation System</h3>
+        <p class="project-desc">Real-time American Sign Language translation using a dual-model approach — CNN for static gestures, Random Forest for dynamic real-time recognition. Built at Samsung Innovation Campus × Misk AI Program.</p>
+        <div class="chips" style="margin-bottom:2.4rem;"><span class="chip">Python</span><span class="chip">CNN</span><span class="chip">Random Forest</span><span class="chip">Scikit-learn</span></div>
+        <div class="project-links"><a href="https://github.com/RinDataz/ASL_Translation_System" target="_blank">GitHub ↗</a><a href="https://www.linkedin.com/feed/update/urn:li:activity:7262072075505356800" target="_blank">Demo ↗</a></div>
       </div>
-    </section>
-
-    <!--Contact-->
-    <section class="contact" id="contact">
-      <div class="row">
-        <h2>Get in Touch</h2>
-        <div class="contact__info">
-          <p>
-            Are you interested in collaborating on a data science or AI project, exploring innovative fintech solutions, or discussing mentoring opportunities? 
-            I’m always open to sharing insights, answering questions, or even just having a friendly chat! 
-            Feel free to reach out — I’ll do my best to get back to you promptly. 😊
-          </p>
-          <p>The quickest way to reach me is via email:</p>
-          <a href="mailto:RinadH.Almjishai@gmail.com" class="btn">RinadH.Almjishai@gmail.com</a>
-        </div>
+      <div class="project-card">
+        <div class="project-num">02</div>
+        <h3 class="project-title">Credit Card Fraud Detection</h3>
+        <p class="project-desc">ML model to detect fraudulent credit card transactions, reaching 98% accuracy — built with Python and scikit-learn using feature engineering and financial data analysis.</p>
+        <div class="chips" style="margin-bottom:2.4rem;"><span class="chip">Python</span><span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">Feature Engineering</span></div>
+        <div class="project-links"><a href="https://www.kaggle.com/code/renadhassan/freud-detection/notebook" target="_blank">Kaggle ↗</a></div>
       </div>
-    </section>
-    
+      <div class="project-card">
+        <div class="project-num">03</div>
+        <h3 class="project-title">Cyclistic Bike-Share Analysis</h3>
+        <p class="project-desc">End-to-end data analysis using Python and SQL — delivering interactive Power BI dashboards that surfaced ridership patterns and operational efficiency opportunities.</p>
+        <div class="chips" style="margin-bottom:2.4rem;"><span class="chip">Python</span><span class="chip">SQL</span><span class="chip">Power BI</span><span class="chip">Data Preprocessing</span></div>
+        <div class="project-links"><a href="https://github.com/RinDataz/Google-Data-Analytics-Capstone-Cyclistic-Case-Study" target="_blank">GitHub ↗</a></div>
+      </div>
+      <div class="project-card">
+        <div class="project-num">04</div>
+        <h3 class="project-title">Sarrah | سرح</h3>
+        <p class="project-desc">A blockchain-powered crowdfunding platform built to support Saudi SMEs and entrepreneurs — using smart contracts for secure transactions. Placed 3rd in the Fintech track at Beyond × UJ Launched Bootcamp.</p>
+        <div class="chips" style="margin-bottom:2.4rem;"><span class="chip">Blockchain</span><span class="chip">Smart Contracts</span><span class="chip">FinTech</span><span class="chip">Product Strategy</span></div>
+        <div class="project-links"><a href="https://www.linkedin.com/posts/renad-hassan-dataz_fintech-launchedbootcamp-beyondxuj-activity-7245436850427842561-KU4I" target="_blank">Pitch ↗</a></div>
+      </div>
+    </div>
+  </section>
+</div>
 
-  <!-- ***** Footer ***** -->
+<div class="page-wrap">
+  <section class="section" id="hackathons">
+    <p class="section-eyebrow fade">Hackathons</p>
+    <h2 class="section-title fade">Competition record</h2>
+    <div class="hack-list">
+      <div class="hack-item">
+        <div class="hack-place">1st</div>
+        <div><div class="hack-title">Innovatech Hackathon</div><div class="hack-org">Ministry of Hajj &amp; Umrah · 2025</div><p class="hack-desc">National-level win competing against teams from across Saudi Arabia — developed an innovative tech solution at the intersection of AI and public service.</p></div>
+      </div>
+      <div class="hack-item">
+        <div class="hack-place">Top 5</div>
+        <div><div class="hack-title">Bank Alinma Case Competition</div><div class="hack-org">Bank Alinma · 2025</div><p class="hack-desc">Top 5 out of 2,000+ participants — delivered a high-impact strategic case under competition conditions.</p></div>
+      </div>
+      <div class="hack-item">
+        <div class="hack-place">3rd</div>
+        <div><div class="hack-title">Beyond × UJ Fintech Bootcamp</div><div class="hack-org">University of Jeddah · 2024</div><p class="hack-desc">3rd place in the Fintech track with Sarrah | سرح. Led concept development and delivered the investor pitch.</p></div>
+      </div>
+      <div class="hack-item">
+        <div class="hack-place">3rd</div>
+        <div><div class="hack-title">SDAIA × Microsoft Imagine Cup</div><div class="hack-org">SDAIA × Microsoft · 2024</div><p class="hack-desc">3rd at university level, advanced to the national round. Built an AI-powered mental health support app — led backend development and ML model integration.</p></div>
+      </div>
+    </div>
+  </section>
+</div>
 
-  <footer role="contentinfo" class="footer">
-    <div class="row">
-      <!-- Update the links to point to your accounts -->
-      <ul class="footer__social-links">
-        <li class="footer__social-link-item">
-          <a href="https://twitter.com/RinDataz/" title="Link to Twitter Profile">
-            <img src="./images/twitter.svg" class="footer__social-image" alt="Twitter">
-          </a>
-        </li>
-        <li class="footer__social-link-item">
-          <a href="https://github.com/RinDataz/" title="Link to Github Profile">
-            <img src="./images/github.svg" class="footer__social-image" alt="Github">
-          </a>
-        </li>
-        <li class="footer__social-link-item">
-          <a href=https://www.linkedin.com/in/renad-hassan-dataz/">
-            <img src="./images/linkedin.svg" title="Link to Linkedin Profile" class="footer__social-image" alt="Linkedin">
-          </a>
-        </li>
-      </ul>
-  </footer>
+<section class="section awards-bg" id="awards">
+  <div class="page-wrap">
+    <p class="section-eyebrow fade">Recognition</p>
+    <h2 class="section-title fade">Awards &amp; honors</h2>
+    <div class="awards-grid fade">
+      <div class="award-card"><div class="award-title">1st Place — Innovatech Hackathon</div><div class="award-org">Ministry of Hajj &amp; Umrah · 2025</div><p class="award-desc">National-level hackathon win, competing against teams from across Saudi Arabia.</p></div>
+      <div class="award-card"><div class="award-title">Top 5 — Bank Alinma Case Competition</div><div class="award-org">Bank Alinma · 2025</div><p class="award-desc">Top 5 out of 2,000+ participants in a high-stakes banking strategy case competition.</p></div>
+      <div class="award-card"><div class="award-title">First Honors — GPA 4.86 / 5.0</div><div class="award-org">University of Jeddah · Data Science</div><p class="award-desc">Graduated with First Honors in Data Science, minor in Financial Technology &amp; Banking.</p></div>
+      <div class="award-card"><div class="award-title">Mawhiba National Gifted Program</div><div class="award-org">Kingdom of Saudi Arabia · 2022 – Present</div><p class="award-desc">Selected for the national gifted student program, representing the university at national and international events.</p></div>
+    </div>
+  </div>
+</section>
 
-  <a href="#top" class="back-to-top" title="Back to Top">
-    <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image"/>
-  </a>
-  <script src="./index.js"></script>
+<div class="page-wrap">
+  <section class="section" id="certs">
+    <p class="section-eyebrow fade">Certifications</p>
+    <h2 class="section-title fade">Continuous learning</h2>
+    <div class="cert-grid fade">
+      <div class="cert-card"><a href="https://www.coursera.org/account/accomplishments/specialization/5D592SYI6KB0" class="cert-name" target="_blank">ML Specialist</a><div class="cert-issuer">DeepLearning.AI</div></div>
+      <div class="cert-card"><a href="https://www.coursera.org/account/accomplishments/specialization/AVGKW6CUOYLC" class="cert-name" target="_blank">Data Science Professional</a><div class="cert-issuer">IBM</div></div>
+      <div class="cert-card"><a href="https://www.coursera.org/account/accomplishments/specialization/YQNQKZESFUN2" class="cert-name" target="_blank">AI Engineering Specialization</a><div class="cert-issuer">IBM</div></div>
+      <div class="cert-card"><a href="https://www.coursera.org/account/accomplishments/specialization/KGKQJMJSJXPX" class="cert-name" target="_blank">AI Developer Specialization</a><div class="cert-issuer">IBM</div></div>
+      <div class="cert-card"><a href="https://www.credly.com/badges/b2dbd015-695c-4de7-82d6-45acfac1cb0c" class="cert-name" target="_blank">Google Data Analytics</a><div class="cert-issuer">Google</div></div>
+      <div class="cert-card"><a href="#" class="cert-name">Data Science Pathway (Advanced)</a><div class="cert-issuer">Saudi Digital Academy</div></div>
+      <div class="cert-card"><a href="https://www.coursera.org/account/accomplishments/records/INL5FXOJDAUF" class="cert-name" target="_blank">FinTech Foundations</a><div class="cert-issuer">HKUST</div></div>
+      <div class="cert-card"><a href="#" class="cert-name">McKinsey Forward Program</a><div class="cert-issuer">McKinsey &amp; Company</div></div>
+      <div class="cert-card"><a href="#" class="cert-name">Foundational Consulting Skills</a><div class="cert-issuer">Mustashar Accelerator</div></div>
+    </div>
+  </section>
+</div>
+
+<div class="page-wrap">
+  <section class="section" id="about">
+    <p class="section-eyebrow fade">About</p>
+    <h2 class="section-title fade">A bit about me</h2>
+    <div class="about-grid fade">
+      <div class="about-body">
+        <p>I'm a Data Scientist and Product Analyst from Jeddah, Saudi Arabia. I graduated with <strong>First Honors</strong> in Data Science from the University of Jeddah, with a minor in Financial Technology and Banking.</p>
+        <p>My work tends to live at the edge of disciplines — I'm drawn to problems where <em>data meets culture meets product</em>. A lot of what I do involves making things that were built somewhere else actually make sense here: translating not just language, but <strong>intent, context, and expectation</strong>.</p>
+        <p>Outside of work, I care a lot about mentorship and access to opportunity — which is why I built Dulani, and why I'll keep building things like it.</p>
+      </div>
+      <div class="about-aside">
+        <div class="about-row"><span class="about-label">Based in</span><span class="about-val">Jeddah, Saudi Arabia</span></div>
+        <div class="about-row"><span class="about-label">Education</span><span class="about-val">B.Sc. Data Science — University of Jeddah</span></div>
+        <div class="about-row"><span class="about-label">Languages</span><span class="about-val">Arabic (Native) · English (Fluent)</span></div>
+        <div class="about-row"><span class="about-label">Open to</span><span class="about-val">Product, Strategy &amp; Consulting roles</span></div>
+        <div class="about-row"><span class="about-label">CV</span><span class="about-val"><a href="mailto:Rinadh.almjishai@gmail.com" style="color:var(--accent);text-decoration:none;">Request via email →</a></span></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="page-wrap">
+  <section class="section" id="contact">
+    <p class="section-eyebrow fade">Contact</p>
+    <div class="contact-split fade">
+      <div>
+        <h2 class="contact-intro">Let's talk.</h2>
+        <p class="contact-sub">I'm open to product, strategy, and consulting opportunities — as well as collaborations, mentorship, and the occasional interesting conversation. Don't hesitate to reach out.</p>
+        <a href="mailto:Rinadh.almjishai@gmail.com" class="btn btn-fill">Send an email</a>
+      </div>
+      <div class="contact-links">
+        <a href="mailto:Rinadh.almjishai@gmail.com" class="contact-link"><span class="contact-link-label">Email</span><span class="contact-link-val">Rinadh.almjishai@gmail.com</span><span class="contact-link-arrow">↗</span></a>
+        <a href="https://www.linkedin.com/in/renad-hassan-dataz/" target="_blank" class="contact-link"><span class="contact-link-label">LinkedIn</span><span class="contact-link-val">renad-hassan-dataz</span><span class="contact-link-arrow">↗</span></a>
+        <a href="https://github.com/RinDataz/" target="_blank" class="contact-link"><span class="contact-link-label">GitHub</span><span class="contact-link-val">RinDataz</span><span class="contact-link-arrow">↗</span></a>
+        <a href="https://twitter.com/RinDataz/" target="_blank" class="contact-link"><span class="contact-link-label">Twitter</span><span class="contact-link-val">@RinDataz</span><span class="contact-link-arrow">↗</span></a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <span class="footer-name">Rinad Almjishai</span>
+  <span class="footer-copy">© 2026</span>
+</footer>
+
+<a href="#top" class="btt" id="btt">↑</a>
+
+<script>
+  const obs = new IntersectionObserver(e => e.forEach(x => { if (x.isIntersecting) x.target.classList.add('visible'); }), { threshold: 0.08 });
+  document.querySelectorAll('.fade, .timeline-item, .hack-item').forEach((el, i) => {
+    if (el.classList.contains('timeline-item') || el.classList.contains('hack-item')) el.style.transitionDelay = (i % 10) * 0.04 + 's';
+    obs.observe(el);
+  });
+  const btt = document.getElementById('btt');
+  window.addEventListener('scroll', () => btt.classList.toggle('show', scrollY > 500));
+</script>
 </body>
-
-</main>
 </html>
