@@ -1,189 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rinad Almjishai</title>
-  <meta name="description" content="Rinad Almjishai — Product Analyst, AI Strategist, Consultant. Jeddah, Saudi Arabia." />
+  <title>Rinad Almjishai — Data Scientist &amp; AI Strategist</title>
+  <meta name="description" content="Rinad Almjishai — Data Scientist, AI Strategist, Consultant. Jeddah, Saudi Arabia." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Outfit:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #0E0E10;
-      --surface: #161618;
-      --surface2: #1E1E21;
-      --border: rgba(255,255,255,0.07);
-      --border-hover: rgba(255,255,255,0.14);
-      --text: #E8E6E1;
-      --text-muted: #7A7875;
-      --text-dim: #4A4845;
-      --accent: #C97B4B;
-      --accent-dim: rgba(201,123,75,0.12);
-      --font-serif: 'Lora', Georgia, serif;
-      --font-sans: 'Outfit', sans-serif;
-      --font-mono: 'JetBrains Mono', monospace;
-    }
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-    html { font-size: 62.5%; scroll-behavior: smooth; }
-    body { font-family: var(--font-sans); background: var(--bg); color: var(--text); font-size: 1.6rem; line-height: 1.65; overflow-x: hidden; }
-
-    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; display: flex; justify-content: space-between; align-items: center; padding: 1.8rem 5rem; background: rgba(14,14,16,0.88); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); }
-    .nav-logo { font-family: var(--font-serif); font-size: 1.7rem; color: var(--text); text-decoration: none; }
-    .nav-links { display: flex; list-style: none; gap: 3.2rem; }
-    .nav-links a { font-family: var(--font-mono); font-size: 1.1rem; letter-spacing: 0.08em; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
-    .nav-links a:hover { color: var(--accent); }
-    .nav-cta { font-family: var(--font-mono); font-size: 1.1rem; letter-spacing: 0.08em; color: var(--accent); text-decoration: none; border: 1px solid var(--accent); padding: 0.7rem 1.8rem; transition: all 0.2s; }
-    .nav-cta:hover { background: var(--accent); color: var(--bg); }
-
-    .page-wrap { max-width: 110rem; margin: 0 auto; padding: 0 5rem; }
-
-    .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 14rem 0 8rem; border-bottom: 1px solid var(--border); }
-    .hero-label { font-family: var(--font-mono); font-size: 1.1rem; letter-spacing: 0.15em; color: var(--accent); margin-bottom: 2.8rem; display: flex; align-items: center; gap: 1.2rem; }
-    .hero-label::before { content: ''; display: inline-block; width: 2.4rem; height: 1px; background: var(--accent); }
-    .hero-heading { font-family: var(--font-serif); font-size: clamp(4.8rem, 8vw, 9.6rem); font-weight: 500; line-height: 1.0; letter-spacing: -0.02em; color: var(--text); margin-bottom: 3.2rem; }
-    .hero-heading em { font-style: italic; color: var(--accent); }
-    .hero-sub { font-size: 1.9rem; color: var(--text-muted); font-weight: 300; max-width: 58rem; line-height: 1.8; margin-bottom: 5rem; }
-    .hero-sub strong { color: var(--text); font-weight: 400; }
-    .hero-actions { display: flex; gap: 2rem; flex-wrap: wrap; }
-    .btn { font-family: var(--font-mono); font-size: 1.1rem; letter-spacing: 0.08em; text-decoration: none; padding: 1.2rem 2.8rem; border: 1px solid; transition: all 0.2s; display: inline-block; }
-    .btn-fill { background: var(--accent); color: var(--bg); border-color: var(--accent); }
-    .btn-fill:hover { background: transparent; color: var(--accent); }
-    .btn-outline { color: var(--text-muted); border-color: var(--border-hover); }
-    .btn-outline:hover { color: var(--text); border-color: var(--text-muted); }
-
-    .section { padding: 9rem 0; border-bottom: 1px solid var(--border); }
-    .section-eyebrow { font-family: var(--font-mono); font-size: 1rem; letter-spacing: 0.18em; color: var(--text-dim); text-transform: uppercase; margin-bottom: 1.6rem; display: flex; align-items: center; gap: 1.2rem; }
-    .section-eyebrow::after { content: ''; flex: 1; height: 1px; background: var(--border); }
-    .section-title { font-family: var(--font-serif); font-size: clamp(3.2rem, 5vw, 5.2rem); font-weight: 500; letter-spacing: -0.02em; color: var(--text); margin-bottom: 6rem; line-height: 1.1; }
-
-    .timeline { display: flex; flex-direction: column; }
-    .timeline-item { display: grid; grid-template-columns: 20rem 1fr; border-top: 1px solid var(--border); padding: 3.5rem 0; opacity: 0; transform: translateY(16px); transition: opacity 0.5s ease, transform 0.5s ease; }
-    .timeline-item.visible { opacity: 1; transform: translateY(0); }
-    .timeline-item:last-child { border-bottom: 1px solid var(--border); }
-    .timeline-left { padding-right: 4rem; padding-top: 0.4rem; }
-    .timeline-date { font-family: var(--font-mono); font-size: 1.1rem; color: var(--text-dim); letter-spacing: 0.04em; margin-bottom: 0.8rem; line-height: 1.5; }
-    .timeline-tag { display: inline-block; font-family: var(--font-mono); font-size: 0.9rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.3rem 0.9rem; background: var(--accent-dim); color: var(--accent); border: 1px solid rgba(201,123,75,0.25); }
-    .timeline-tag.now { background: var(--accent); color: var(--bg); border-color: var(--accent); }
-    .timeline-role { font-family: var(--font-serif); font-size: 2.2rem; font-weight: 500; color: var(--text); letter-spacing: -0.01em; margin-bottom: 0.4rem; }
-    .timeline-org { font-family: var(--font-mono); font-size: 1.1rem; color: var(--text-muted); letter-spacing: 0.05em; margin-bottom: 1.4rem; }
-    .timeline-desc { font-size: 1.5rem; color: var(--text-muted); line-height: 1.8; max-width: 68rem; font-weight: 300; margin-bottom: 1.6rem; }
-    .chips { display: flex; flex-wrap: wrap; gap: 0.8rem; }
-    .chip { font-family: var(--font-mono); font-size: 1rem; padding: 0.4rem 1rem; border: 1px solid var(--border); color: var(--text-dim); letter-spacing: 0.04em; }
-
-    .skills-bg { background: var(--surface); }
-    .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); }
-    .skill-col { background: var(--surface); padding: 4rem 3.5rem; }
-    .skill-col-title { font-family: var(--font-mono); font-size: 1rem; text-transform: uppercase; letter-spacing: 0.18em; color: var(--accent); margin-bottom: 3rem; }
-    .skill-col ul { list-style: none; display: flex; flex-direction: column; gap: 1.4rem; }
-    .skill-col li { font-size: 1.5rem; color: var(--text-muted); font-weight: 300; display: flex; align-items: center; gap: 1rem; }
-    .skill-col li::before { content: '·'; color: var(--accent); font-size: 2rem; line-height: 1; }
-
-    .projects-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); }
-    .project-card { background: var(--bg); padding: 4rem; transition: background 0.25s; }
-    .project-card:hover { background: var(--surface); }
-    .project-num { font-family: var(--font-mono); font-size: 1rem; color: var(--text-dim); letter-spacing: 0.1em; margin-bottom: 2rem; }
-    .project-title { font-family: var(--font-serif); font-size: 2.4rem; font-weight: 500; letter-spacing: -0.02em; color: var(--text); margin-bottom: 1.4rem; line-height: 1.2; }
-    .project-desc { font-size: 1.5rem; color: var(--text-muted); line-height: 1.8; font-weight: 300; margin-bottom: 2.4rem; }
-    .project-links { display: flex; gap: 2.4rem; }
-    .project-links a { font-family: var(--font-mono); font-size: 1.1rem; color: var(--text-muted); text-decoration: none; letter-spacing: 0.06em; border-bottom: 1px solid var(--border); padding-bottom: 0.2rem; transition: color 0.2s, border-color 0.2s; }
-    .project-links a:hover { color: var(--accent); border-color: var(--accent); }
-
-    .hack-list { display: flex; flex-direction: column; }
-    .hack-item { display: grid; grid-template-columns: 8rem 1fr; gap: 4rem; border-top: 1px solid var(--border); padding: 3.5rem 0; align-items: start; opacity: 0; transform: translateY(12px); transition: opacity 0.4s ease, transform 0.4s ease; }
-    .hack-item.visible { opacity: 1; transform: translateY(0); }
-    .hack-item:last-child { border-bottom: 1px solid var(--border); }
-    .hack-place { font-family: var(--font-serif); font-size: 3.2rem; font-weight: 500; color: var(--accent); line-height: 1; padding-top: 0.4rem; }
-    .hack-title { font-family: var(--font-serif); font-size: 2.2rem; font-weight: 500; color: var(--text); letter-spacing: -0.01em; margin-bottom: 0.6rem; }
-    .hack-org { font-family: var(--font-mono); font-size: 1rem; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.2rem; }
-    .hack-desc { font-size: 1.5rem; color: var(--text-muted); font-weight: 300; line-height: 1.75; max-width: 62rem; }
-
-    .awards-bg { background: var(--surface); }
-    .awards-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); }
-    .award-card { background: var(--surface); padding: 4rem; }
-    .award-title { font-family: var(--font-serif); font-size: 2rem; font-weight: 500; color: var(--text); letter-spacing: -0.01em; margin-bottom: 0.6rem; }
-    .award-org { font-family: var(--font-mono); font-size: 1rem; color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1.4rem; }
-    .award-desc { font-size: 1.4rem; color: var(--text-muted); font-weight: 300; line-height: 1.7; }
-
-    .cert-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); }
-    .cert-card { background: var(--bg); padding: 2.8rem; transition: background 0.2s; }
-    .cert-card:hover { background: var(--surface); }
-    .cert-name { font-family: var(--font-serif); font-size: 1.7rem; font-weight: 500; color: var(--text); text-decoration: none; display: block; margin-bottom: 0.6rem; transition: color 0.2s; }
-    .cert-card:hover .cert-name { color: var(--accent); }
-    .cert-issuer { font-family: var(--font-mono); font-size: 1rem; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
-
-    .about-grid { display: grid; grid-template-columns: 1fr 38rem; gap: 8rem; align-items: start; }
-    .about-body { font-family: var(--font-serif); font-size: 2rem; line-height: 1.8; color: var(--text-muted); }
-    .about-body strong { color: var(--text); font-weight: 500; }
-    .about-body em { font-style: italic; color: var(--accent); }
-    .about-body p + p { margin-top: 2.4rem; }
-    .about-aside { display: flex; flex-direction: column; }
-    .about-row { display: flex; flex-direction: column; gap: 0.4rem; padding: 2rem 0; border-top: 1px solid var(--border); }
-    .about-row:last-child { border-bottom: 1px solid var(--border); }
-    .about-label { font-family: var(--font-mono); font-size: 1rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-dim); }
-    .about-val { font-size: 1.5rem; color: var(--text-muted); font-weight: 300; }
-
-    .contact-split { display: grid; grid-template-columns: 1fr 1fr; gap: 8rem; align-items: start; }
-    .contact-intro { font-family: var(--font-serif); font-size: 2.4rem; font-weight: 500; color: var(--text); line-height: 1.4; letter-spacing: -0.02em; margin-bottom: 2.4rem; }
-    .contact-sub { font-size: 1.5rem; color: var(--text-muted); font-weight: 300; line-height: 1.8; margin-bottom: 3.5rem; }
-    .contact-links { display: flex; flex-direction: column; }
-    .contact-link { display: flex; align-items: center; justify-content: space-between; padding: 1.8rem 0; border-bottom: 1px solid var(--border); text-decoration: none; transition: border-color 0.2s; }
-    .contact-link:first-child { border-top: 1px solid var(--border); }
-    .contact-link:hover { border-bottom-color: var(--accent); }
-    .contact-link-label { font-family: var(--font-mono); font-size: 1rem; color: var(--text-dim); letter-spacing: 0.12em; text-transform: uppercase; }
-    .contact-link-val { font-size: 1.5rem; color: var(--text-muted); font-weight: 300; }
-    .contact-link:hover .contact-link-val { color: var(--accent); }
-    .contact-link-arrow { color: var(--text-dim); font-size: 1.4rem; transition: color 0.2s, transform 0.2s; }
-    .contact-link:hover .contact-link-arrow { color: var(--accent); transform: translate(3px,-3px); }
-
-    footer { padding: 3rem 5rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); }
-    .footer-name { font-family: var(--font-serif); font-size: 1.6rem; color: var(--text-muted); }
-    .footer-copy { font-family: var(--font-mono); font-size: 1rem; color: var(--text-dim); letter-spacing: 0.08em; }
-
-    .btt { position: fixed; bottom: 3.5rem; right: 3.5rem; width: 4.4rem; height: 4.4rem; background: var(--surface2); border: 1px solid var(--border); color: var(--text-muted); display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 1.6rem; opacity: 0; visibility: hidden; transition: all 0.3s; z-index: 99; }
-    .btt.show { opacity: 1; visibility: visible; }
-    .btt:hover { border-color: var(--accent); color: var(--accent); }
-
-    .fade { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
-    .fade.visible { opacity: 1; transform: translateY(0); }
-
-    @media (max-width: 1024px) {
-      nav { padding: 1.8rem 3rem; } .nav-links { gap: 2.4rem; }
-      .page-wrap { padding: 0 3rem; }
-      .hero { padding: 12rem 0 8rem; }
-      .skills-grid { grid-template-columns: 1fr 1fr; }
-      .about-grid { grid-template-columns: 1fr; gap: 5rem; }
-      .contact-split { grid-template-columns: 1fr; gap: 5rem; }
-    }
-    @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .projects-grid { grid-template-columns: 1fr; }
-      .awards-grid { grid-template-columns: 1fr; }
-      .cert-grid { grid-template-columns: 1fr 1fr; }
-      .timeline-item { grid-template-columns: 1fr; gap: 1.2rem; }
-      .timeline-left { padding-right: 0; }
-      .skills-grid { grid-template-columns: 1fr; }
-      .hack-item { grid-template-columns: 5rem 1fr; gap: 2.5rem; }
-      footer { flex-direction: column; gap: 1rem; text-align: center; }
-    }
-    @media (max-width: 500px) {
-      .cert-grid { grid-template-columns: 1fr; }
-      .hero-heading { font-size: 4.4rem; }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css" />
 </head>
 <body>
 
+<div class="ambient-glow-1"></div>
+<div class="ambient-glow-2"></div>
+
 <nav>
   <a href="#top" class="nav-logo">Rinad Almjishai</a>
-  <ul class="nav-links">
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#hackathons">Hackathons</a></li>
-    <li><a href="#awards">Awards</a></li>
-    <li><a href="#about">About</a></li>
-  </ul>
-  <a href="#contact" class="nav-cta">Say hello</a>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#hackathons">Hackathons</a></li>
+      <li><a href="#awards">Awards</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+    <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle dark/light theme">
+      <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <circle cx="12" cy="12" r="4"></circle>
+        <path d="M12 2v2"></path>
+        <path d="M12 20v2"></path>
+        <path d="m4.93 4.93 1.41 1.41"></path>
+        <path d="m17.66 17.66 1.41 1.41"></path>
+        <path d="M2 12h2"></path>
+        <path d="M20 12h2"></path>
+        <path d="m6.34 17.66-1.41 1.41"></path>
+        <path d="m19.07 4.93-1.41 1.41"></path>
+      </svg>
+    </button>
+    <a href="#contact" class="nav-cta">Say hello</a>
+  </div>
 </nav>
 
 <div class="page-wrap">
@@ -202,11 +58,20 @@
   <section class="section" id="experience">
     <p class="section-eyebrow fade">Experience</p>
     <h2 class="section-title fade">Where I've been</h2>
+
+    <div class="filter-tabs fade">
+      <button class="filter-tab active" data-filter="all">All</button>
+      <button class="filter-tab" data-filter="data-ai">AI &amp; Data</button>
+      <button class="filter-tab" data-filter="strategy">Strategy &amp; Consulting</button>
+      <button class="filter-tab" data-filter="product">Product &amp; Design</button>
+      <button class="filter-tab" data-filter="leadership">Leadership &amp; Community</button>
+    </div>
+
     <div class="timeline">
 
-      <div class="timeline-item">
+      <div class="timeline-item" data-category="strategy">
         <div class="timeline-left"><div class="timeline-date">Mar 2026 — Present</div><span class="timeline-tag now">Now</span></div>
-        <div>
+        <div class="timeline-right">
           <div class="timeline-role">Consultant</div>
           <div class="timeline-org">Task Force Global · Consulting Capability Development</div>
           <p class="timeline-desc">Participating in the consulting capability development program — building structured Frameworks and programmes to streamline the onboarding process for junior consultants.</p>
@@ -214,9 +79,9 @@
         </div>
       </div>
 
-      <div class="timeline-item">
+      <div class="timeline-item" data-category="product">
         <div class="timeline-left"><div class="timeline-date">Oct 2025 — Present</div><span class="timeline-tag now">Now</span></div>
-        <div>
+        <div class="timeline-right">
           <div class="timeline-role">Product Analyst</div>
           <div class="timeline-org">Confidential · GCC Government Super-App</div>
           <p class="timeline-desc">End-to-end product documentation across 10+ modules — 30+ user stories and 200+ test cases built from scratch. Took full ownership of cultural anchoring: localizing UI/UX copy and HR policy for GCC users, adapting flows for Arabic speakers, and bridging Arabic and English stakeholders across leadership, HR, IT, and engineering teams.</p>
@@ -224,9 +89,9 @@
         </div>
       </div>
  
-      <div class="timeline-item">
+      <div class="timeline-item" data-category="data-ai">
         <div class="timeline-left"><div class="timeline-date">Oct 2025 — Mar 2026</div><span class="timeline-tag">6 months</span></div>
-        <div>
+        <div class="timeline-right">
           <div class="timeline-role">AI Strategy Consultant</div>
           <div class="timeline-org">Synapse</div>
           <p class="timeline-desc">Designed Synapse's 2-year AI Solutions strategy — operating model, governance structure, hiring plan, capability maturity roadmap, and delivery frameworks across generative AI, machine learning, and automation.</p>
@@ -234,9 +99,9 @@
         </div>
       </div>
  
-      <div class="timeline-item">
+      <div class="timeline-item" data-category="strategy">
         <div class="timeline-left"><div class="timeline-date">Sep 2025 — Jan 2026</div><span class="timeline-tag">5 months</span></div>
-        <div>
+        <div class="timeline-right">
           <div class="timeline-role">Consulting Trainee</div>
           <div class="timeline-org">Fateel · Apprenticeship</div>
           <p class="timeline-desc">Applied structured frameworks to real client challenges through an intensive apprenticeship — building skills in problem structuring, synthesis, and strategic communication.</p>
@@ -244,9 +109,9 @@
         </div>
       </div>
  
-      <div class="timeline-item">
+      <div class="timeline-item" data-category="data-ai">
         <div class="timeline-left"><div class="timeline-date">Jun 2025 — Sep 2025</div><span class="timeline-tag">3 months</span></div>
-        <div>
+        <div class="timeline-right">
           <div class="timeline-role">Data Scientist</div>
           <div class="timeline-org">Eddekhar · Full-time, Riyadh</div>
           <p class="timeline-desc">Contributed across the full data stack — backend development, data warehousing, API design, and user testing. Built financial health dashboards, onboarding insight reports, and employee segmentation models to support leadership decisions.</p>
@@ -254,9 +119,9 @@
         </div>
       </div>
  
-      <div class="timeline-item">
+      <div class="timeline-item" data-category="strategy">
         <div class="timeline-left"><div class="timeline-date">Aug 2024 — Sep 2025</div><span class="timeline-tag">1 yr 2 mos</span></div>
-        <div>
+        <div class="timeline-right">
           <div class="timeline-role">Project Management Lead</div>
           <div class="timeline-org">Synapse · Jeddah, Hybrid</div>
           <p class="timeline-desc">Led a 16-member cross-functional team across design, engineering, training, and content — delivering 5 AI and technology programs to 500+ beneficiaries across Saudi Arabia, and building 5+ strategic partnerships that grew Synapse's reach to 3,000+ users.</p>
@@ -264,9 +129,9 @@
         </div>
       </div>
  
-      <div class="timeline-item">
+      <div class="timeline-item" data-category="strategy">
         <div class="timeline-left"><div class="timeline-date">Mar 2025 — May 2025</div><span class="timeline-tag">3 months</span></div>
-        <div>
+        <div class="timeline-right">
           <div class="timeline-role">Forward Program Graduate</div>
           <div class="timeline-org">McKinsey & Company</div>
           <p class="timeline-desc">Completed McKinsey's competitive Forward Program — structured thinking, data storytelling, resilience, and professional effectiveness using McKinsey's problem-solving frameworks.</p>
@@ -274,9 +139,9 @@
         </div>
       </div>
  
-      <div class="timeline-item">
+      <div class="timeline-item" data-category="product">
         <div class="timeline-left"><div class="timeline-date">Jul 2025 — Oct 2025</div><span class="timeline-tag">3 months</span></div>
-        <div>
+        <div class="timeline-right">
           <div class="timeline-role">Product Management Associate</div>
           <div class="timeline-org">Kimolian Academy · Remote</div>
           <p class="timeline-desc">Conducted market, user, and competitor research across hospitality, education, and retention-tech to translate client pain points into actionable product requirements.</p>
@@ -284,9 +149,9 @@
         </div>
       </div>
  
-      <div class="timeline-item">
+      <div class="timeline-item" data-category="leadership">
         <div class="timeline-left"><div class="timeline-date">Jul 2024 — Feb 2025</div><span class="timeline-tag">8 months</span></div>
-        <div>
+        <div class="timeline-right">
           <div class="timeline-role">Public Relations Lead</div>
           <div class="timeline-org">Barmajon · Part-time</div>
           <p class="timeline-desc">Led public relations efforts — managing external communications, stakeholder outreach, and community engagement to strengthen the organization's visibility and brand positioning.</p>
@@ -294,9 +159,9 @@
         </div>
       </div>
  
-      <div class="timeline-item">
+      <div class="timeline-item" data-category="data-ai">
         <div class="timeline-left"><div class="timeline-date">Aug 2024 — Nov 2024</div><span class="timeline-tag">4 months</span></div>
-        <div>
+        <div class="timeline-right">
           <div class="timeline-role">AI Innovation Trainee</div>
           <div class="timeline-org">Samsung Innovation Campus</div>
           <p class="timeline-desc">Selected as one of fewer than 100 participants nationwide for Samsung's intensive AI program covering data processing, machine learning, and deep learning.</p>
@@ -304,9 +169,9 @@
         </div>
       </div>
  
-      <div class="timeline-item">
+      <div class="timeline-item" data-category="leadership">
         <div class="timeline-left"><div class="timeline-date">Jul 2024 — Oct 2024</div><span class="timeline-tag">4 months</span></div>
-        <div>
+        <div class="timeline-right">
           <div class="timeline-role">Founder & Leader</div>
           <div class="timeline-org">Dulani Initiative</div>
           <p class="timeline-desc">Founded and led a student mentorship program — managed 29 mentors who delivered 184+ hours of academic guidance to 125 students, achieving a 94% satisfaction rate.</p>
@@ -314,9 +179,9 @@
         </div>
       </div>
  
-      <div class="timeline-item">
+      <div class="timeline-item" data-category="leadership">
         <div class="timeline-left"><div class="timeline-date">Feb 2024 — Nov 2025</div><span class="timeline-tag">1 yr 10 mos</span></div>
-        <div>
+        <div class="timeline-right">
           <div class="timeline-role">Digital Media & Content Lead</div>
           <div class="timeline-org">Google Developers Group · Part-time</div>
           <p class="timeline-desc">Co-led the design team establishing the club's visual identity and content strategy — driving consistent brand presence and community engagement across digital platforms.</p>
@@ -324,9 +189,9 @@
         </div>
       </div>
  
-      <div class="timeline-item">
+      <div class="timeline-item" data-category="leadership">
         <div class="timeline-left"><div class="timeline-date">Feb 2024 — Sep 2024</div><span class="timeline-tag">8 months</span></div>
-        <div>
+        <div class="timeline-right">
           <div class="timeline-role">Impact Makers Program Mentee</div>
           <div class="timeline-org">Wathba · Saudi Arabia</div>
           <p class="timeline-desc">Selected as a mentee in Wathba's Impact Makers Program — engaging in structured mentorship sessions and workshops across leadership, sales, marketing, financial basics, and technical tools. Applied learnings directly to real initiatives at Synapse and Dulani.</p>
@@ -334,20 +199,20 @@
         </div>
       </div>
  
-      <div class="timeline-item">
+      <div class="timeline-item" data-category="data-ai">
         <div class="timeline-left"><div class="timeline-date">Jan 2024 — Mar 2024</div><span class="timeline-tag">3 months</span></div>
-        <div>
+        <div class="timeline-right">
           <div class="timeline-role">LLM Program Trainee</div>
           <div class="timeline-org">SDAIA · Saudi Arabia</div>
           <p class="timeline-desc">Completed SDAIA's specialized Large Language Models training — building applied knowledge in LLM architectures, prompt design, and AI implementation in the Saudi context. Laid the technical AI foundation for subsequent roles in AI strategy and product analysis.</p>
           <div class="chips"><span class="chip">LLM Architectures</span><span class="chip">Prompt Design</span><span class="chip">AI Implementation</span></div>
         </div>
       </div>
- 
+
     </div>
   </section>
 </div>
- 
+
 <section class="section skills-bg" id="skills">
   <div class="page-wrap">
     <p class="section-eyebrow fade">Skills</p>
@@ -513,14 +378,6 @@
 
 <a href="#top" class="btt" id="btt">↑</a>
 
-<script>
-  const obs = new IntersectionObserver(e => e.forEach(x => { if (x.isIntersecting) x.target.classList.add('visible'); }), { threshold: 0.08 });
-  document.querySelectorAll('.fade, .timeline-item, .hack-item').forEach((el, i) => {
-    if (el.classList.contains('timeline-item') || el.classList.contains('hack-item')) el.style.transitionDelay = (i % 10) * 0.04 + 's';
-    obs.observe(el);
-  });
-  const btt = document.getElementById('btt');
-  window.addEventListener('scroll', () => btt.classList.toggle('show', scrollY > 500));
-</script>
+<script src="index.js" defer></script>
 </body>
 </html>
