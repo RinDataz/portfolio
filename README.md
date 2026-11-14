@@ -42,9 +42,7 @@ Visit my portfolio at: [Rinad Almjishai - Portfolio](https://rindataz.github.io/
 
 ## 📂 **Repository Structure**
 ```plaintext
-├── index.html          # Main HTML file
-├── index.css           # Styling for the website
-├── index.js            # JavaScript for interactivity
+├── index.html          # Single self-contained page (HTML + CSS + JS)
 ├── /images             # Folder containing images and logos
 ├── /fonts              # Custom fonts used in the design
 └── README.md           # Information about the repository

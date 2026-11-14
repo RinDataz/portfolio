@@ -35,4 +35,6 @@ This file contains a growing ruleset that improves over time. **At session start
 
 ## Learned Rules
 
-<!-- New rules are appended below this line. Do not edit above this section. -->
+<!-- New rules are appended below this line. Do not edit above this section. -->1. [DATA] Never publish the resume PDF (or link to one) on the portfolio site — user does not want it public.
+2. [CODE] Keep CSS and JS inline in index.html — separate files failed to load where the user previewed the page, showing unstyled white text.
+3. [PROCESS] Never add Co-Authored-By/Claude-Session trailers or Claude as author; commit as Rinad almjishai <156121591+RinDataz@users.noreply.github.com>, and no Claude attribution in PR descriptions — user objects to Claude appearing as an author.
