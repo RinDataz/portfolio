@@ -1,4 +1,4 @@
-# Rinad Almjishai - Data Scientist Portfolio
+# Rinad Almjishai — Product Analyst Portfolio
 
 Welcome to my personal portfolio! This repository contains the source code and assets for my GitHub Pages website, showcasing my work, experience, and achievements as a data scientist specializing in AI, fintech, and innovative solutions.
 
@@ -54,7 +54,7 @@ Visit my portfolio at: [Rinad Almjishai - Portfolio](https://rindataz.github.io/
 
 ## 📬 **Get in Touch**
 Feel free to reach out for collaborations, mentorship opportunities, or just to say hello:
-- **Email**: [RinadH.Almjishai@gmail.com](mailto:RinadH.Almjishai@gmail.com)
+- **Email**: [rinadh.almjishai@gmail.com](mailto:rinadh.almjishai@gmail.com)
 - **LinkedIn**: [Rinad Almjishai](https://www.linkedin.com/in/renad-hassan-dataz)
 
 ---
