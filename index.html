@@ -1,382 +1,389 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rinad Almjishai — Data Scientist &amp; AI Strategist</title>
-  <meta name="description" content="Rinad Almjishai — Data Scientist, AI Strategist, Consultant. Jeddah, Saudi Arabia." />
+  <title>Rinad Almjishai — Product Analyst</title>
+  <meta name="description" content="Rinad Almjishai — Product Analyst (freelance) at Almaaber Advisors. Data Science graduate, First Honors. Product, AI and program delivery for GCC organizations. Based in Jeddah, Saudi Arabia." />
+  <meta property="og:title" content="Rinad Almjishai — Product Analyst" />
+  <meta property="og:description" content="Product analysis, AI strategy and delivery for GCC government and enterprise products." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://rindataz.github.io/portfolio/" />
+  <meta name="theme-color" content="#000000" />
+  <link rel="icon" href="images/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="index.css" />
 </head>
 <body>
 
-<div class="ambient-glow-1"></div>
-<div class="ambient-glow-2"></div>
+<div class="progress" id="progress"></div>
+<div class="cursor" id="cursor" aria-hidden="true"></div>
 
-<nav>
-  <a href="#top" class="nav-logo">Rinad Almjishai</a>
-  <div class="nav-right">
-    <ul class="nav-links">
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#hackathons">Hackathons</a></li>
-      <li><a href="#awards">Awards</a></li>
-      <li><a href="#about">About</a></li>
-    </ul>
-    <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle dark/light theme">
-      <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-        <circle cx="12" cy="12" r="4"></circle>
-        <path d="M12 2v2"></path>
-        <path d="M12 20v2"></path>
-        <path d="m4.93 4.93 1.41 1.41"></path>
-        <path d="m17.66 17.66 1.41 1.41"></path>
-        <path d="M2 12h2"></path>
-        <path d="M20 12h2"></path>
-        <path d="m6.34 17.66-1.41 1.41"></path>
-        <path d="m19.07 4.93-1.41 1.41"></path>
-      </svg>
-    </button>
-    <a href="#contact" class="nav-cta">Say hello</a>
+<!-- NAV -->
+<header class="nav" id="nav">
+  <a href="#top" class="nav-logo"><span class="logo-mark">R</span>Rinad Almjishai</a>
+  <nav class="nav-links" id="nav-links" aria-label="Primary">
+    <a href="#now">Now</a>
+    <a href="#experience">Experience</a>
+    <a href="#work">Work</a>
+    <a href="#recognition">Recognition</a>
+    <a href="#about">About</a>
+  </nav>
+  <div class="nav-actions">
+    <a href="Rinad_Almjishai_Resume.pdf" class="nav-ghost" target="_blank" rel="noopener">Resume</a>
+    <a href="#contact" class="nav-cta">Let's talk</a>
+    <button class="nav-burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
   </div>
-</nav>
+</header>
 
-<div class="page-wrap">
-  <section class="hero" id="top">
-    <p class="hero-label">Jeddah, Saudi Arabia</p>
-    <h1 class="hero-heading">Rinad<br><em>Almjishai</em></h1>
-    <p class="hero-sub">I work at the intersection of <strong>data, product, and strategy</strong> — helping organizations in the GCC build things that are technically sound, culturally intelligent, and genuinely useful.</p>
-    <div class="hero-actions">
-      <a href="#experience" class="btn btn-fill">View my work</a>
-      <a href="#contact" class="btn btn-outline">Get in touch</a>
+<main>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <canvas id="field" aria-hidden="true"></canvas>
+  <div class="hero-inner">
+    <p class="hero-status reveal"><span class="pulse"></span>Open to full-time Product &amp; Strategy roles · Jeddah / Remote</p>
+    <h1 class="hero-title">
+      <span class="line"><span>I turn complex</span></span>
+      <span class="line"><span>requirements into</span></span>
+      <span class="line"><span>products that <em class="rotator" id="rotator">ship.</em></span></span>
+    </h1>
+    <p class="hero-sub reveal">Rinad Almjishai — <strong>Product Analyst</strong> and First-Honors Data Science graduate. I scope, document and test products for GCC government and enterprise clients, bridging leadership, policy experts and engineering in Arabic and English.</p>
+    <div class="hero-actions reveal">
+      <a href="#now" class="btn btn-light">See what I'm working on <span class="arr">→</span></a>
+      <a href="Rinad_Almjishai_Resume.pdf" class="btn btn-line" target="_blank" rel="noopener">Download resume</a>
     </div>
-  </section>
-</div>
+  </div>
+  <a href="#trusted" class="scroll-cue" aria-label="Scroll down"><span></span></a>
+</section>
 
-<div class="page-wrap">
-  <section class="section" id="experience">
-    <p class="section-eyebrow fade">Experience</p>
-    <h2 class="section-title fade">Where I've been</h2>
-
-    <div class="filter-tabs fade">
-      <button class="filter-tab active" data-filter="all">All</button>
-      <button class="filter-tab" data-filter="data-ai">AI &amp; Data</button>
-      <button class="filter-tab" data-filter="strategy">Strategy &amp; Consulting</button>
-      <button class="filter-tab" data-filter="product">Product &amp; Design</button>
-      <button class="filter-tab" data-filter="leadership">Leadership &amp; Community</button>
-    </div>
-
-    <div class="timeline">
-
-      <div class="timeline-item" data-category="strategy">
-        <div class="timeline-left"><div class="timeline-date">Mar 2026 — Present</div><span class="timeline-tag now">Now</span></div>
-        <div class="timeline-right">
-          <div class="timeline-role">Consultant</div>
-          <div class="timeline-org">Task Force Global · Consulting Capability Development</div>
-          <p class="timeline-desc">Participating in the consulting capability development program — building structured Frameworks and programmes to streamline the onboarding process for junior consultants.</p>
-          <div class="chips"><span class="chip">Structured Thinking</span><span class="chip">Strategy</span><span class="chip">Client Engagement</span></div>
-        </div>
-      </div>
-
-      <div class="timeline-item" data-category="product">
-        <div class="timeline-left"><div class="timeline-date">Oct 2025 — Present</div><span class="timeline-tag now">Now</span></div>
-        <div class="timeline-right">
-          <div class="timeline-role">Product Analyst</div>
-          <div class="timeline-org">Confidential · GCC Government Super-App</div>
-          <p class="timeline-desc">End-to-end product documentation across 10+ modules — 30+ user stories and 200+ test cases built from scratch. Took full ownership of cultural anchoring: localizing UI/UX copy and HR policy for GCC users, adapting flows for Arabic speakers, and bridging Arabic and English stakeholders across leadership, HR, IT, and engineering teams.</p>
-          <div class="chips"><span class="chip">Product Docs</span><span class="chip">Functional Testing</span><span class="chip">UX Localization</span><span class="chip">AR/EN Bridging</span><span class="chip">Stakeholder Management</span></div>
-        </div>
-      </div>
- 
-      <div class="timeline-item" data-category="data-ai">
-        <div class="timeline-left"><div class="timeline-date">Oct 2025 — Mar 2026</div><span class="timeline-tag">6 months</span></div>
-        <div class="timeline-right">
-          <div class="timeline-role">AI Strategy Consultant</div>
-          <div class="timeline-org">Synapse</div>
-          <p class="timeline-desc">Designed Synapse's 2-year AI Solutions strategy — operating model, governance structure, hiring plan, capability maturity roadmap, and delivery frameworks across generative AI, machine learning, and automation.</p>
-          <div class="chips"><span class="chip">AI Strategy</span><span class="chip">Operating Models</span><span class="chip">Governance</span><span class="chip">GenAI</span></div>
-        </div>
-      </div>
- 
-      <div class="timeline-item" data-category="strategy">
-        <div class="timeline-left"><div class="timeline-date">Sep 2025 — Jan 2026</div><span class="timeline-tag">5 months</span></div>
-        <div class="timeline-right">
-          <div class="timeline-role">Consulting Trainee</div>
-          <div class="timeline-org">Fateel · Apprenticeship</div>
-          <p class="timeline-desc">Applied structured frameworks to real client challenges through an intensive apprenticeship — building skills in problem structuring, synthesis, and strategic communication.</p>
-          <div class="chips"><span class="chip">Problem Structuring</span><span class="chip">Client Analysis</span><span class="chip">Frameworks</span></div>
-        </div>
-      </div>
- 
-      <div class="timeline-item" data-category="data-ai">
-        <div class="timeline-left"><div class="timeline-date">Jun 2025 — Sep 2025</div><span class="timeline-tag">3 months</span></div>
-        <div class="timeline-right">
-          <div class="timeline-role">Data Scientist</div>
-          <div class="timeline-org">Eddekhar · Full-time, Riyadh</div>
-          <p class="timeline-desc">Contributed across the full data stack — backend development, data warehousing, API design, and user testing. Built financial health dashboards, onboarding insight reports, and employee segmentation models to support leadership decisions.</p>
-          <div class="chips"><span class="chip">Python</span><span class="chip">SQL</span><span class="chip">Data Warehousing</span><span class="chip">Dashboards</span><span class="chip">API Design</span></div>
-        </div>
-      </div>
- 
-      <div class="timeline-item" data-category="strategy">
-        <div class="timeline-left"><div class="timeline-date">Aug 2024 — Sep 2025</div><span class="timeline-tag">1 yr 2 mos</span></div>
-        <div class="timeline-right">
-          <div class="timeline-role">Project Management Lead</div>
-          <div class="timeline-org">Synapse · Jeddah, Hybrid</div>
-          <p class="timeline-desc">Led a 16-member cross-functional team across design, engineering, training, and content — delivering 5 AI and technology programs to 500+ beneficiaries across Saudi Arabia, and building 5+ strategic partnerships that grew Synapse's reach to 3,000+ users.</p>
-          <div class="chips"><span class="chip">Program Management</span><span class="chip">Partnerships</span><span class="chip">Cross-functional Leadership</span></div>
-        </div>
-      </div>
- 
-      <div class="timeline-item" data-category="strategy">
-        <div class="timeline-left"><div class="timeline-date">Mar 2025 — May 2025</div><span class="timeline-tag">3 months</span></div>
-        <div class="timeline-right">
-          <div class="timeline-role">Forward Program Graduate</div>
-          <div class="timeline-org">McKinsey & Company</div>
-          <p class="timeline-desc">Completed McKinsey's competitive Forward Program — structured thinking, data storytelling, resilience, and professional effectiveness using McKinsey's problem-solving frameworks.</p>
-          <div class="chips"><span class="chip">McKinsey Frameworks</span><span class="chip">Data Storytelling</span></div>
-        </div>
-      </div>
- 
-      <div class="timeline-item" data-category="product">
-        <div class="timeline-left"><div class="timeline-date">Jul 2025 — Oct 2025</div><span class="timeline-tag">3 months</span></div>
-        <div class="timeline-right">
-          <div class="timeline-role">Product Management Associate</div>
-          <div class="timeline-org">Kimolian Academy · Remote</div>
-          <p class="timeline-desc">Conducted market, user, and competitor research across hospitality, education, and retention-tech to translate client pain points into actionable product requirements.</p>
-          <div class="chips"><span class="chip">Market Research</span><span class="chip">User Research</span><span class="chip">Product Requirements</span></div>
-        </div>
-      </div>
- 
-      <div class="timeline-item" data-category="leadership">
-        <div class="timeline-left"><div class="timeline-date">Jul 2024 — Feb 2025</div><span class="timeline-tag">8 months</span></div>
-        <div class="timeline-right">
-          <div class="timeline-role">Public Relations Lead</div>
-          <div class="timeline-org">Barmajon · Part-time</div>
-          <p class="timeline-desc">Led public relations efforts — managing external communications, stakeholder outreach, and community engagement to strengthen the organization's visibility and brand positioning.</p>
-          <div class="chips"><span class="chip">Public Relations</span><span class="chip">Stakeholder Outreach</span><span class="chip">Communications</span></div>
-        </div>
-      </div>
- 
-      <div class="timeline-item" data-category="data-ai">
-        <div class="timeline-left"><div class="timeline-date">Aug 2024 — Nov 2024</div><span class="timeline-tag">4 months</span></div>
-        <div class="timeline-right">
-          <div class="timeline-role">AI Innovation Trainee</div>
-          <div class="timeline-org">Samsung Innovation Campus</div>
-          <p class="timeline-desc">Selected as one of fewer than 100 participants nationwide for Samsung's intensive AI program covering data processing, machine learning, and deep learning.</p>
-          <div class="chips"><span class="chip">ML / DL</span><span class="chip">Data Processing</span><span class="chip">AI Applications</span></div>
-        </div>
-      </div>
- 
-      <div class="timeline-item" data-category="leadership">
-        <div class="timeline-left"><div class="timeline-date">Jul 2024 — Oct 2024</div><span class="timeline-tag">4 months</span></div>
-        <div class="timeline-right">
-          <div class="timeline-role">Founder & Leader</div>
-          <div class="timeline-org">Dulani Initiative</div>
-          <p class="timeline-desc">Founded and led a student mentorship program — managed 29 mentors who delivered 184+ hours of academic guidance to 125 students, achieving a 94% satisfaction rate.</p>
-          <div class="chips"><span class="chip">Leadership</span><span class="chip">Program Design</span><span class="chip">Mentorship</span></div>
-        </div>
-      </div>
- 
-      <div class="timeline-item" data-category="leadership">
-        <div class="timeline-left"><div class="timeline-date">Feb 2024 — Nov 2025</div><span class="timeline-tag">1 yr 10 mos</span></div>
-        <div class="timeline-right">
-          <div class="timeline-role">Digital Media & Content Lead</div>
-          <div class="timeline-org">Google Developers Group · Part-time</div>
-          <p class="timeline-desc">Co-led the design team establishing the club's visual identity and content strategy — driving consistent brand presence and community engagement across digital platforms.</p>
-          <div class="chips"><span class="chip">Content Strategy</span><span class="chip">Visual Identity</span><span class="chip">Community</span></div>
-        </div>
-      </div>
- 
-      <div class="timeline-item" data-category="leadership">
-        <div class="timeline-left"><div class="timeline-date">Feb 2024 — Sep 2024</div><span class="timeline-tag">8 months</span></div>
-        <div class="timeline-right">
-          <div class="timeline-role">Impact Makers Program Mentee</div>
-          <div class="timeline-org">Wathba · Saudi Arabia</div>
-          <p class="timeline-desc">Selected as a mentee in Wathba's Impact Makers Program — engaging in structured mentorship sessions and workshops across leadership, sales, marketing, financial basics, and technical tools. Applied learnings directly to real initiatives at Synapse and Dulani.</p>
-          <div class="chips"><span class="chip">Leadership</span><span class="chip">Sales &amp; Marketing</span><span class="chip">Financial Basics</span><span class="chip">Technical Tools</span></div>
-        </div>
-      </div>
- 
-      <div class="timeline-item" data-category="data-ai">
-        <div class="timeline-left"><div class="timeline-date">Jan 2024 — Mar 2024</div><span class="timeline-tag">3 months</span></div>
-        <div class="timeline-right">
-          <div class="timeline-role">LLM Program Trainee</div>
-          <div class="timeline-org">SDAIA · Saudi Arabia</div>
-          <p class="timeline-desc">Completed SDAIA's specialized Large Language Models training — building applied knowledge in LLM architectures, prompt design, and AI implementation in the Saudi context. Laid the technical AI foundation for subsequent roles in AI strategy and product analysis.</p>
-          <div class="chips"><span class="chip">LLM Architectures</span><span class="chip">Prompt Design</span><span class="chip">AI Implementation</span></div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-</div>
-
-<section class="section skills-bg" id="skills">
-  <div class="page-wrap">
-    <p class="section-eyebrow fade">Skills</p>
-    <h2 class="section-title fade">What I work with</h2>
-    <div class="skills-grid fade">
-      <div class="skill-col">
-        <div class="skill-col-title">Strategy & Consulting</div>
-        <ul>
-          <li>Structured problem solving</li><li>Market &amp; competitor research</li><li>Business case development</li><li>KPI architecture</li><li>Operating model design</li><li>Executive communication</li><li>Stakeholder management</li>
-        </ul>
-      </div>
-      <div class="skill-col">
-        <div class="skill-col-title">Product & Design</div>
-        <ul>
-          <li>User story writing</li><li>Functional &amp; UAT testing</li><li>UX localization (AR / EN)</li><li>UI copy &amp; content design</li><li>Agile · Jira · Confluence</li><li>Cultural anchoring (GCC)</li><li>Accessibility testing</li>
-        </ul>
-      </div>
-      <div class="skill-col">
-        <div class="skill-col-title">Data & AI</div>
-        <ul>
-          <li>Python &amp; SQL</li><li>Machine learning &amp; deep learning</li><li>LLM applications</li><li>Tableau &amp; Power BI</li><li>Statistical modeling</li><li>Data warehousing</li><li>Financial analysis</li>
-        </ul>
-      </div>
+<!-- MARQUEE -->
+<section class="marquee-wrap" id="trusted" aria-label="Organizations I've worked with">
+  <p class="marquee-label">Worked with &amp; recognized by</p>
+  <div class="marquee">
+    <div class="marquee-track">
+      <span>Almaaber Advisors</span><span>Synapse</span><span>Eddekhar</span><span>Kimolian Academy</span><span>Ministry of Hajj &amp; Umrah</span><span>Alinma Bank</span><span>SDAIA</span><span>Samsung Innovation Campus</span><span>McKinsey Forward</span><span>BCG</span><span>AWS</span><span>IBM</span><span>Mawhiba</span>
+      <span aria-hidden="true">Almaaber Advisors</span><span aria-hidden="true">Synapse</span><span aria-hidden="true">Eddekhar</span><span aria-hidden="true">Kimolian Academy</span><span aria-hidden="true">Ministry of Hajj &amp; Umrah</span><span aria-hidden="true">Alinma Bank</span><span aria-hidden="true">SDAIA</span><span aria-hidden="true">Samsung Innovation Campus</span><span aria-hidden="true">McKinsey Forward</span><span aria-hidden="true">BCG</span><span aria-hidden="true">AWS</span><span aria-hidden="true">IBM</span><span aria-hidden="true">Mawhiba</span>
     </div>
   </div>
 </section>
 
-<div class="page-wrap">
-  <section class="section" id="projects">
-    <p class="section-eyebrow fade">Projects</p>
-    <h2 class="section-title fade">Things I've built</h2>
-    <div class="projects-grid fade">
-      <div class="project-card">
-        <div class="project-num">01</div>
-        <h3 class="project-title">ASL Translation System</h3>
-        <p class="project-desc">Real-time American Sign Language translation using a dual-model approach — CNN for static gestures, Random Forest for dynamic real-time recognition. Built at Samsung Innovation Campus × Misk AI Program.</p>
-        <div class="chips" style="margin-bottom:2.4rem;"><span class="chip">Python</span><span class="chip">CNN</span><span class="chip">Random Forest</span><span class="chip">Scikit-learn</span></div>
-        <div class="project-links"><a href="https://github.com/RinDataz/ASL_Translation_System" target="_blank">GitHub ↗</a><a href="https://www.linkedin.com/feed/update/urn:li:activity:7262072075505356800" target="_blank">Demo ↗</a></div>
-      </div>
-      <div class="project-card">
-        <div class="project-num">02</div>
-        <h3 class="project-title">Credit Card Fraud Detection</h3>
-        <p class="project-desc">ML model to detect fraudulent credit card transactions, reaching 98% accuracy — built with Python and scikit-learn using feature engineering and financial data analysis.</p>
-        <div class="chips" style="margin-bottom:2.4rem;"><span class="chip">Python</span><span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">Feature Engineering</span></div>
-        <div class="project-links"><a href="https://www.kaggle.com/code/renadhassan/freud-detection/notebook" target="_blank">Kaggle ↗</a></div>
-      </div>
-      <div class="project-card">
-        <div class="project-num">03</div>
-        <h3 class="project-title">Cyclistic Bike-Share Analysis</h3>
-        <p class="project-desc">End-to-end data analysis using Python and SQL — delivering interactive Power BI dashboards that surfaced ridership patterns and operational efficiency opportunities.</p>
-        <div class="chips" style="margin-bottom:2.4rem;"><span class="chip">Python</span><span class="chip">SQL</span><span class="chip">Power BI</span><span class="chip">Data Preprocessing</span></div>
-        <div class="project-links"><a href="https://github.com/RinDataz/Google-Data-Analytics-Capstone-Cyclistic-Case-Study" target="_blank">GitHub ↗</a></div>
-      </div>
-      <div class="project-card">
-        <div class="project-num">04</div>
-        <h3 class="project-title">Sarrah | سرح</h3>
-        <p class="project-desc">A blockchain-powered crowdfunding platform built to support Saudi SMEs and entrepreneurs — using smart contracts for secure transactions. Placed 3rd in the Fintech track at Beyond × UJ Launched Bootcamp.</p>
-        <div class="chips" style="margin-bottom:2.4rem;"><span class="chip">Blockchain</span><span class="chip">Smart Contracts</span><span class="chip">FinTech</span><span class="chip">Product Strategy</span></div>
-        <div class="project-links"><a href="https://www.linkedin.com/posts/renad-hassan-dataz_fintech-launchedbootcamp-beyondxuj-activity-7245436850427842561-KU4I" target="_blank">Pitch ↗</a></div>
-      </div>
-    </div>
-  </section>
-</div>
-
-<div class="page-wrap">
-  <section class="section" id="hackathons">
-    <p class="section-eyebrow fade">Hackathons</p>
-    <h2 class="section-title fade">Competition record &amp;awards</h2>
-    <div class="hack-list">
-      <div class="hack-item">
-        <div class="hack-place">1st</div>
-        <div><div class="hack-title">Innovatech Hackathon</div><div class="hack-org">Ministry of Hajj &amp; Umrah · 2025</div><p class="hack-desc">National-level win competing against teams from across Saudi Arabia — developed an innovative tech solution at the intersection of AI and public service.</p></div>
-      </div>
-      <div class="hack-item">
-        <div class="hack-place">Top 5</div>
-        <div><div class="hack-title">Bank Alinma Case Competition</div><div class="hack-org">Bank Alinma · 2025</div><p class="hack-desc">Top 5 out of 2,000+ participants — delivered a high-impact strategic case under competition conditions.</p></div>
-      </div>
-      <div class="hack-item">
-        <div class="hack-place">3rd</div>
-        <div><div class="hack-title">Beyond × UJ Fintech Bootcamp</div><div class="hack-org">University of Jeddah · 2024</div><p class="hack-desc">3rd place in the Fintech track with Sarrah | سرح. Led concept development and delivered the investor pitch.</p></div>
-      </div>
-      <div class="hack-item">
-        <div class="hack-place">3rd</div>
-        <div><div class="hack-title">SDAIA × Microsoft Imagine Cup</div><div class="hack-org">SDAIA × Microsoft · 2024</div><p class="hack-desc">3rd at university level, advanced to the national round. Built an AI-powered mental health support app — led backend development and ML model integration.</p></div>
-      </div>
-    </div>
-  </section>
-</div>
-
-<section class="section awards-bg" id="awards">
-  <div class="page-wrap">
-    <p class="section-eyebrow fade">Recognition</p>
-    <h2 class="section-title fade">Honors</h2>
-    <div class="awards-grid fade">
-      <div class="award-card"><div class="award-title">First Honors — GPA 4.86 / 5.0</div><div class="award-org">University of Jeddah · Data Science</div><p class="award-desc">Graduated with First Honors in Data Science, minor in Financial Technology &amp; Banking.</p></div>
-      <div class="award-card"><div class="award-title">Mawhiba National Gifted Program</div><div class="award-org">Kingdom of Saudi Arabia · 2022 – Present</div><p class="award-desc">Selected for the national gifted student program, representing the university at national and international events.</p></div>
-    </div>
+<!-- STATS -->
+<section class="stats">
+  <div class="wrap stats-grid">
+    <div class="stat reveal"><div class="stat-num"><span data-count="200">0</span>+</div><div class="stat-label">Test cases written for a GCC government super-app</div></div>
+    <div class="stat reveal"><div class="stat-num"><span data-count="10">0</span>+</div><div class="stat-label">Product modules documented end-to-end</div></div>
+    <div class="stat reveal"><div class="stat-num"><span data-count="3000">0</span>+</div><div class="stat-label">Users reached through programs I led</div></div>
+    <div class="stat reveal"><div class="stat-num"><span data-count="4.86" data-decimals="2">0</span></div><div class="stat-label">GPA / 5.0 — B.Sc. Data Science, First Honors</div></div>
   </div>
 </section>
 
-<div class="page-wrap">
-  <section class="section" id="certs">
-    <p class="section-eyebrow fade">Certifications</p>
-    <h2 class="section-title fade">Continuous learning</h2>
-    <div class="cert-grid fade">
-      <div class="cert-card"><a href="https://www.coursera.org/account/accomplishments/specialization/5D592SYI6KB0" class="cert-name" target="_blank">ML Specialist</a><div class="cert-issuer">DeepLearning.AI</div></div>
-      <div class="cert-card"><a href="https://www.coursera.org/account/accomplishments/specialization/AVGKW6CUOYLC" class="cert-name" target="_blank">Data Science Professional</a><div class="cert-issuer">IBM</div></div>
-      <div class="cert-card"><a href="https://www.coursera.org/account/accomplishments/specialization/YQNQKZESFUN2" class="cert-name" target="_blank">AI Engineering Specialization</a><div class="cert-issuer">IBM</div></div>
-      <div class="cert-card"><a href="https://www.coursera.org/account/accomplishments/specialization/KGKQJMJSJXPX" class="cert-name" target="_blank">AI Developer Specialization</a><div class="cert-issuer">IBM</div></div>
-      <div class="cert-card"><a href="https://www.credly.com/badges/b2dbd015-695c-4de7-82d6-45acfac1cb0c" class="cert-name" target="_blank">Google Data Analytics</a><div class="cert-issuer">Google</div></div>
-      <div class="cert-card"><a href="#" class="cert-name">Data Science Pathway (Advanced)</a><div class="cert-issuer">Saudi Digital Academy</div></div>
-      <div class="cert-card"><a href="https://www.coursera.org/account/accomplishments/records/INL5FXOJDAUF" class="cert-name" target="_blank">FinTech Foundations</a><div class="cert-issuer">HKUST</div></div>
-      <div class="cert-card"><a href="#" class="cert-name">McKinsey Forward Program</a><div class="cert-issuer">McKinsey &amp; Company</div></div>
-      <div class="cert-card"><a href="#" class="cert-name">Foundational Consulting Skills</a><div class="cert-issuer">Mustashar Accelerator</div></div>
+<!-- NOW (white section) -->
+<section class="section invert" id="now">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow reveal">01 — Now</p>
+      <h2 class="section-title reveal">Currently building a government super-app.</h2>
     </div>
-  </section>
-</div>
 
-<div class="page-wrap">
-  <section class="section" id="about">
-    <p class="section-eyebrow fade">About</p>
-    <h2 class="section-title fade">A bit about me</h2>
-    <div class="about-grid fade">
-      <div class="about-body">
-        <p>I'm a Data Scientist and Product Analyst from Jeddah, Saudi Arabia. I graduated with <strong>First Honors</strong> in Data Science from the University of Jeddah, with a minor in Financial Technology and Banking.</p>
-        <p>My work tends to live at the edge of disciplines — I'm drawn to problems where <em>data meets culture meets product</em>. A lot of what I do involves making things that were built somewhere else actually make sense here: translating not just language, but <strong>intent, context, and expectation</strong>.</p>
-        <p>Outside of work, I care a lot about mentorship and access to opportunity — which is why I built Dulani, and why I'll keep building things like it.</p>
+    <article class="now-card reveal">
+      <div class="now-top">
+        <div>
+          <div class="now-badge"><span class="pulse dark"></span>Current role · Freelance</div>
+          <h3 class="now-role">Product Analyst</h3>
+          <p class="now-org">Almaaber Advisors · Hybrid · Oct 2025 — Present</p>
+        </div>
+        <div class="now-metrics">
+          <div><strong data-count="10">0</strong><span>+ modules</span></div>
+          <div><strong data-count="30">0</strong><span>+ user stories</span></div>
+          <div><strong data-count="200">0</strong><span>+ test cases</span></div>
+        </div>
       </div>
-      <div class="about-aside">
-        <div class="about-row"><span class="about-label">Based in</span><span class="about-val">Jeddah, Saudi Arabia</span></div>
-        <div class="about-row"><span class="about-label">Education</span><span class="about-val">B.Sc. Data Science — University of Jeddah</span></div>
-        <div class="about-row"><span class="about-label">Languages</span><span class="about-val">Arabic (Native) · English (Fluent)</span></div>
-        <div class="about-row"><span class="about-label">Open to</span><span class="about-val">Product, Strategy &amp; Consulting roles</span></div>
-        <div class="about-row"><span class="about-label">CV</span><span class="about-val"><a href="mailto:Rinadh.almjishai@gmail.com" style="color:var(--accent);text-decoration:none;">Request via email →</a></span></div>
+      <div class="now-body">
+        <div class="now-point"><span class="np-num">A</span><div><h4>Own the product documentation</h4><p>End-to-end documentation for 10+ modules of a GCC government super-app — user stories and test cases aligned to HR policy and cross-system integrations.</p></div></div>
+        <div class="now-point"><span class="np-num">B</span><div><h4>Align every stakeholder</h4><p>Coordinate client leadership, HR experts, IT and engineering to scope requirements, close gaps and manage cross-system dependencies.</p></div></div>
+        <div class="now-point"><span class="np-num">C</span><div><h4>Built QA from zero</h4><p>Designed the testing process from scratch; run functional, edge-case and accessibility testing that catches critical issues before release.</p></div></div>
+        <div class="now-point"><span class="np-num">D</span><div><h4>Lead Arabic localization</h4><p>Localize UI/UX and content, aligning user flows with Saudi regulatory and cultural requirements.</p></div></div>
       </div>
+      <div class="chips"><span class="chip">Requirements</span><span class="chip">User Stories</span><span class="chip">Test Design</span><span class="chip">Accessibility</span><span class="chip">AR / EN Localization</span><span class="chip">Jira · Confluence</span></div>
+    </article>
+  </div>
+</section>
+
+<!-- HOW I WORK -->
+<section class="section" id="process">
+  <div class="wrap process">
+    <div class="process-left">
+      <p class="eyebrow reveal">02 — How I work</p>
+      <h2 class="section-title reveal">From ambiguity to release.</h2>
+      <p class="lead reveal">The same loop runs through everything I've done — from a fintech data stack to a national AI program to a government app.</p>
     </div>
-  </section>
-</div>
+    <ol class="process-steps">
+      <li class="step reveal"><span class="step-n">01</span><div><h3>Discover</h3><p>Work backwards from users and policy. Run discovery workshops with leadership and subject experts until the real problem is on the table.</p></div></li>
+      <li class="step reveal"><span class="step-n">02</span><div><h3>Define</h3><p>Turn it into scoped requirements, user stories and acceptance criteria engineers can build from without guessing.</p></div></li>
+      <li class="step reveal"><span class="step-n">03</span><div><h3>Validate</h3><p>Design functional, edge-case and accessibility tests. Use data to check the thing actually solves the problem.</p></div></li>
+      <li class="step reveal"><span class="step-n">04</span><div><h3>Ship &amp; localize</h3><p>Manage dependencies to release, and make sure it reads, flows and complies for Saudi and GCC users.</p></div></li>
+    </ol>
+  </div>
+</section>
 
-<div class="page-wrap">
-  <section class="section" id="contact">
-    <p class="section-eyebrow fade">Contact</p>
-    <div class="contact-split fade">
+<!-- EXPERIENCE -->
+<section class="section" id="experience">
+  <div class="wrap">
+    <div class="section-head split">
       <div>
-        <h2 class="contact-intro">Let's talk.</h2>
-        <p class="contact-sub">I'm open to product, strategy, and consulting opportunities — as well as collaborations, mentorship, and the occasional interesting conversation. Don't hesitate to reach out.</p>
-        <a href="mailto:Rinadh.almjishai@gmail.com" class="btn btn-fill">Send an email</a>
+        <p class="eyebrow reveal">03 — Experience</p>
+        <h2 class="section-title reveal">Where I've delivered.</h2>
       </div>
-      <div class="contact-links">
-        <a href="mailto:Rinadh.almjishai@gmail.com" class="contact-link"><span class="contact-link-label">Email</span><span class="contact-link-val">Rinadh.almjishai@gmail.com</span><span class="contact-link-arrow">↗</span></a>
-        <a href="https://www.linkedin.com/in/renad-hassan-dataz/" target="_blank" class="contact-link"><span class="contact-link-label">LinkedIn</span><span class="contact-link-val">renad-hassan-dataz</span><span class="contact-link-arrow">↗</span></a>
-        <a href="https://github.com/RinDataz/" target="_blank" class="contact-link"><span class="contact-link-label">GitHub</span><span class="contact-link-val">RinDataz</span><span class="contact-link-arrow">↗</span></a>
-        <a href="https://twitter.com/RinDataz/" target="_blank" class="contact-link"><span class="contact-link-label">Twitter</span><span class="contact-link-val">@RinDataz</span><span class="contact-link-arrow">↗</span></a>
+      <div class="filters reveal" role="tablist" aria-label="Filter experience">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="product">Product</button>
+        <button class="filter" data-filter="strategy">Strategy</button>
+        <button class="filter" data-filter="data">Data &amp; AI</button>
+        <button class="filter" data-filter="lead">Leadership</button>
       </div>
     </div>
-  </section>
-</div>
 
-<footer>
-  <span class="footer-name">Rinad Almjishai</span>
-  <span class="footer-copy">© 2026</span>
+    <div class="timeline" id="timeline">
+      <div class="timeline-line"><div class="timeline-fill" id="timeline-fill"></div></div>
+
+      <article class="job" data-cat="product">
+        <div class="job-date">Oct 2025 — Present<span class="tag tag-now">Now</span></div>
+        <div class="job-main">
+          <h3>Product Analyst <span class="muted">· Freelance</span></h3>
+          <p class="job-org">Almaaber Advisors · Hybrid</p>
+          <p>Product documentation, testing and Arabic localization for 10+ modules of a GCC government super-app. 30+ user stories and 200+ test cases, built on a QA process I designed from scratch.</p>
+          <div class="chips"><span class="chip">Product</span><span class="chip">QA</span><span class="chip">Localization</span></div>
+        </div>
+      </article>
+
+      <article class="job" data-cat="strategy">
+        <div class="job-date">Mar 2026 — May 2026<span class="tag">3 mos</span></div>
+        <div class="job-main">
+          <h3>Consultant</h3>
+          <p class="job-org">Task Force Global · Consulting Capability Development</p>
+          <p>Built structured frameworks and programs to speed up onboarding for junior consultants.</p>
+          <div class="chips"><span class="chip">Frameworks</span><span class="chip">Program Design</span></div>
+        </div>
+      </article>
+
+      <article class="job" data-cat="strategy data">
+        <div class="job-date">Oct 2025 — Mar 2026<span class="tag">6 mos</span></div>
+        <div class="job-main">
+          <h3>AI Strategy Consultant</h3>
+          <p class="job-org">Synapse · Jeddah</p>
+          <p>Designed Synapse's 2-year AI Solutions strategy: operating model, governance, hiring plan and delivery frameworks across generative AI, machine learning and automation. Translated leadership ambitions into a roadmap with capability-maturity milestones that supported investment decisions.</p>
+          <div class="chips"><span class="chip">AI Strategy</span><span class="chip">Operating Model</span><span class="chip">Governance</span><span class="chip">GenAI</span></div>
+        </div>
+      </article>
+
+      <article class="job" data-cat="product">
+        <div class="job-date">Jul 2025 — Oct 2025<span class="tag">4 mos</span></div>
+        <div class="job-main">
+          <h3>Product Management Associate</h3>
+          <p class="job-org">Kimolian Academy · Remote</p>
+          <p>Worked backwards from client pain points through market, user and competitor research to define product requirements.</p>
+          <div class="chips"><span class="chip">User Research</span><span class="chip">Market Research</span><span class="chip">PRDs</span></div>
+        </div>
+      </article>
+
+      <article class="job" data-cat="data">
+        <div class="job-date">Jun 2025 — Aug 2025<span class="tag">Co-op</span></div>
+        <div class="job-main">
+          <h3>Data Scientist <span class="muted">· Co-op</span></h3>
+          <p class="job-org">Eddekhar (Fintech) · Riyadh</p>
+          <p>Hands-on across the stack: backend development, API design, data warehousing and user testing. Built financial-health dashboards and segmentation models, and wrote business cases for leadership decisions.</p>
+          <div class="chips"><span class="chip">Python</span><span class="chip">SQL</span><span class="chip">APIs</span><span class="chip">Dashboards</span></div>
+        </div>
+      </article>
+
+      <article class="job" data-cat="lead strategy">
+        <div class="job-date">Aug 2024 — Sep 2025<span class="tag">1 yr 2 mos</span></div>
+        <div class="job-main">
+          <h3>Project Management Lead</h3>
+          <p class="job-org">Synapse · Jeddah</p>
+          <p>Led a 16-member cross-functional team across design, engineering, training and content to deliver five AI and technology programs to 500+ beneficiaries across the Kingdom. Built a pipeline of 5+ university, corporate and government partners, growing reach 50% to 3,000+ users. Managed scope, schedule, resourcing, risk and impact reporting.</p>
+          <div class="chips"><span class="chip">Program Mgmt</span><span class="chip">Partnerships</span><span class="chip">Team Leadership</span></div>
+        </div>
+      </article>
+
+      <article class="job" data-cat="lead">
+        <div class="job-date">2024<span class="tag">Founder</span></div>
+        <div class="job-main">
+          <h3>Founder &amp; Leader</h3>
+          <p class="job-org">Dulani Initiative</p>
+          <p>Founded a student mentorship program and led 29 mentors who delivered 184+ hours of guidance to 125 students, with a 94% satisfaction rate.</p>
+          <div class="chips"><span class="chip">Founder</span><span class="chip">Mentorship</span></div>
+        </div>
+      </article>
+    </div>
+
+    <details class="earlier reveal">
+      <summary>Earlier roles &amp; community <span class="plus">+</span></summary>
+      <ul>
+        <li><span>Consulting Trainee</span><span>Fateel · Apprenticeship</span><span>2025</span></li>
+        <li><span>Digital Media &amp; Content Lead</span><span>Google Developer Group</span><span>2024 — 2025</span></li>
+        <li><span>Public Relations Lead</span><span>Barmajon</span><span>2024 — 2025</span></li>
+        <li><span>Impact Makers Program Mentee</span><span>Wathba</span><span>2024</span></li>
+        <li><span>Data Science Ambassador</span><span>University of Jeddah</span><span>2022 — 2026</span></li>
+      </ul>
+    </details>
+  </div>
+</section>
+
+<!-- SKILLS (white) -->
+<section class="section invert" id="skills">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow reveal">04 — Toolkit</p>
+      <h2 class="section-title reveal">What I bring to a team.</h2>
+    </div>
+    <div class="skills">
+      <div class="skill reveal">
+        <h3>Product &amp; Delivery</h3>
+        <p>Scoping · requirements &amp; user stories · acceptance criteria · release testing · risk &amp; dependency management · Agile / Scrum · Jira · Confluence</p>
+      </div>
+      <div class="skill reveal">
+        <h3>Stakeholder Leadership</h3>
+        <p>Executive communication · client discovery workshops · cross-functional team leadership · partner development · AR / EN bridging</p>
+      </div>
+      <div class="skill reveal">
+        <h3>AI, Data &amp; Cloud</h3>
+        <p>Generative &amp; agentic AI · LLM applications · machine learning · Python · SQL · API design · AWS · dashboards</p>
+      </div>
+      <div class="skill reveal">
+        <h3>Languages</h3>
+        <p>Arabic — native<br>English — fluent</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WORK -->
+<section class="section" id="work">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow reveal">05 — Selected work</p>
+      <h2 class="section-title reveal">Things I've built.</h2>
+    </div>
+    <div class="projects">
+      <a class="project reveal" href="https://github.com/RinDataz/ASL_Translation_System" target="_blank" rel="noopener">
+        <span class="project-n">01</span>
+        <div class="project-body">
+          <h3>ASL Translation System</h3>
+          <p>Real-time American Sign Language translation with a dual-model approach — CNN for static gestures, Random Forest for live recognition. Samsung Innovation Campus × Misk.</p>
+          <div class="chips"><span class="chip">Python</span><span class="chip">CNN</span><span class="chip">Computer Vision</span></div>
+        </div>
+        <span class="project-go">↗</span>
+      </a>
+      <a class="project reveal" href="https://www.kaggle.com/code/renadhassan/freud-detection/notebook" target="_blank" rel="noopener">
+        <span class="project-n">02</span>
+        <div class="project-body">
+          <h3>Credit Card Fraud Detection</h3>
+          <p>Classification model for fraudulent transactions reaching 98% accuracy, using feature engineering on financial data.</p>
+          <div class="chips"><span class="chip">Python</span><span class="chip">scikit-learn</span><span class="chip">Fintech</span></div>
+        </div>
+        <span class="project-go">↗</span>
+      </a>
+      <a class="project reveal" href="https://www.linkedin.com/posts/renad-hassan-dataz_fintech-launchedbootcamp-beyondxuj-activity-7245436850427842561-KU4I" target="_blank" rel="noopener">
+        <span class="project-n">03</span>
+        <div class="project-body">
+          <h3>Sarrah | سرح</h3>
+          <p>Blockchain crowdfunding platform for Saudi SMEs using smart contracts. 3rd place, Fintech track — Beyond × UJ Launched Bootcamp. I led concept and the investor pitch.</p>
+          <div class="chips"><span class="chip">Product Strategy</span><span class="chip">Fintech</span><span class="chip">Pitch</span></div>
+        </div>
+        <span class="project-go">↗</span>
+      </a>
+      <a class="project reveal" href="https://github.com/RinDataz/Google-Data-Analytics-Capstone-Cyclistic-Case-Study" target="_blank" rel="noopener">
+        <span class="project-n">04</span>
+        <div class="project-body">
+          <h3>Cyclistic Bike-Share Analysis</h3>
+          <p>End-to-end analysis in Python and SQL with interactive Power BI dashboards surfacing ridership patterns and operational opportunities.</p>
+          <div class="chips"><span class="chip">SQL</span><span class="chip">Power BI</span><span class="chip">Analytics</span></div>
+        </div>
+        <span class="project-go">↗</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- RECOGNITION -->
+<section class="section" id="recognition">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow reveal">06 — Recognition</p>
+      <h2 class="section-title reveal">Competitions &amp; honors.</h2>
+    </div>
+    <div class="awards">
+      <div class="award reveal"><div class="award-place">1st</div><div><h3>Innovatech Hackathon</h3><p>Ministry of Hajj &amp; Umrah · 2025</p></div></div>
+      <div class="award reveal"><div class="award-place">Top 5</div><div><h3>Alinma Bank Case Competition</h3><p>Out of 2,000+ participants · 2025</p></div></div>
+      <div class="award reveal"><div class="award-place">3rd</div><div><h3>Beyond × UJ Fintech Bootcamp</h3><p>University of Jeddah · 2024</p></div></div>
+      <div class="award reveal"><div class="award-place">3rd</div><div><h3>SDAIA × Microsoft Imagine Cup</h3><p>University round, advanced to nationals · 2024</p></div></div>
+      <div class="award reveal"><div class="award-place">4.86</div><div><h3>First Honors, Data Science</h3><p>University of Jeddah · Minor in FinTech &amp; Banking</p></div></div>
+      <div class="award reveal"><div class="award-place">★</div><div><h3>Mawhiba Student</h3><p>National gifted program · 2022 — Present</p></div></div>
+    </div>
+
+    <h3 class="sub-title reveal">Training &amp; certifications</h3>
+    <div class="certs">
+      <div class="cert reveal"><span>AWS</span>Certified Cloud Practitioner<em>2025</em></div>
+      <div class="cert reveal"><span>McKinsey</span>Forward Program<em>2025</em></div>
+      <div class="cert reveal"><span>BCG</span>Virtual Work Experience<em>2025</em></div>
+      <div class="cert reveal"><span>Mustashar</span>Foundational Consulting Skills<em>2025</em></div>
+      <a class="cert reveal" href="https://www.coursera.org/account/accomplishments/specialization/KGKQJMJSJXPX" target="_blank" rel="noopener"><span>IBM</span>AI Developer Professional Certificate<em>2024 ↗</em></a>
+      <a class="cert reveal" href="https://www.coursera.org/account/accomplishments/specialization/YQNQKZESFUN2" target="_blank" rel="noopener"><span>IBM</span>AI Engineering Professional Certificate<em>2024 ↗</em></a>
+      <div class="cert reveal"><span>SDAIA</span>LLM Program Trainee<em>2024</em></div>
+      <div class="cert reveal"><span>Samsung</span>Innovation Campus — AI Program<em>2024</em></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT (white) -->
+<section class="section invert" id="about">
+  <div class="wrap about">
+    <div>
+      <p class="eyebrow reveal">07 — About</p>
+      <h2 class="section-title reveal">Data, product and culture — in one person.</h2>
+    </div>
+    <div class="about-body">
+      <p class="reveal">I'm a Product Analyst from Jeddah with a B.Sc. in Data Science (First Honors, 4.86/5.0) and a minor in Financial Technology &amp; Banking from the University of Jeddah.</p>
+      <p class="reveal">My work lives where disciplines meet. I've built data pipelines at a fintech, written a 2-year AI strategy, led a 16-person team delivering national programs, and now I make sure a government super-app is specified, tested and truly fit for the people who'll use it.</p>
+      <p class="reveal">I care about access to opportunity — which is why I founded Dulani and keep mentoring students.</p>
+      <dl class="facts reveal">
+        <div><dt>Based in</dt><dd>Jeddah, Saudi Arabia</dd></div>
+        <div><dt>Looking for</dt><dd>Product Analyst, Associate PM, Strategy &amp; Consulting roles</dd></div>
+        <div><dt>Work style</dt><dd>On-site, hybrid or remote</dd></div>
+        <div><dt>Languages</dt><dd>Arabic (native) · English (fluent)</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-marquee" aria-hidden="true">
+    <div class="contact-track"><span>Let's work together —</span><span>Let's work together —</span><span>Let's work together —</span><span>Let's work together —</span></div>
+  </div>
+  <div class="wrap contact-inner">
+    <p class="lead reveal">Hiring for product, strategy or AI delivery? I reply within a day.</p>
+    <a href="mailto:rinadh.almjishai@gmail.com" class="contact-mail reveal" data-magnetic>rinadh.almjishai@gmail.com</a>
+    <div class="contact-links reveal">
+      <a href="https://www.linkedin.com/in/renad-hassan-dataz/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href="https://github.com/RinDataz/" target="_blank" rel="noopener">GitHub ↗</a>
+      <a href="Rinad_Almjishai_Resume.pdf" target="_blank" rel="noopener">Resume (PDF) ↗</a>
+      <button class="copy" id="copy-email" type="button">Copy email</button>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <span>© <span id="year">2026</span> Rinad Almjishai</span>
+  <span>Jeddah, Saudi Arabia · <span id="clock">--:--</span> AST</span>
+  <a href="#top">Back to top ↑</a>
 </footer>
-
-<a href="#top" class="btt" id="btt">↑</a>
 
 <script src="index.js" defer></script>
 </body>
